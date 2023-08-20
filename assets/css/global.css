@@ -6,7 +6,7 @@
 
 :root {
     font-size: 62.5%;
-    --inline-padding: 28rem;
+    --inline-padding: 18rem;
     --accent-color: #b11917;
     --off-white-color: #ecedf2;
     --type-color: #101010;
@@ -148,7 +148,7 @@ a:hover {
     position: absolute;
     bottom: 4rem;
     left: var(--inline-padding);
-    right: calc(var(--inline-padding) * 1.5);
+    max-width: 50%;
     color: var(--off-white-color);
     display: flex;
     flex-direction: column;
@@ -255,5 +255,72 @@ h1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+
+/* navigation bar */
+
+.hero__head{
+    z-index: 2;
+    position: absolute;
+    top: 3.5rem;
+    left: var(--inline-padding);
+    right: var(--inline-padding);
+    color: var(--off-white-color);
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+}
+.hero__head-underline{
+    content: "";
+    position: absolute;
+    background-color: var(--off-white-color);
+    left: calc(-1 * var(--inline-padding));
+    bottom: -25px;
+    height: 1.5px;
+    width: calc(100% + calc(2* var(--inline-padding)));
+}
+.hero__logo_search_field{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hero__search_option{
+    position: relative;
+    font-size: 1.75rem;
+    cursor: pointer;
+}
+.hero__search_option::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 2.25px;
+    width: 100%;
+    background-color: var(--accent-color);
+}
+.hero__nav_bar{
+    display: flex;
+    gap: 3.2rem;
+    margin-top: 30px;
+}
+.hero__nav_option{
+    display: flex;
+    align-items: center;
+    font-size: 2.2rem;
+    gap: .7rem;
+    cursor: pointer;
+}
+
+/* articles gallery section */
+
+.articles-gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.articles-gallery:nth-child(1){
+    grid-template-columns: 1.5fr 1.5fr;
 }
 
