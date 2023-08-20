@@ -154,9 +154,9 @@ hero
 *
 */
 .hero__section {
-    height: 75vh;
-    min-height: 75vh;
-    max-height: 75vh;
+    height: 90vh;
+    min-height: 90vh;
+    max-height: 90vh;
     overflow: hidden;
     position: relative;
 }
@@ -429,39 +429,55 @@ footer .copyright{
 
 
 /* navigation bar */
-
-.hero__head{
-    z-index: 2;
-    position: absolute;
-    top: 3.5rem;
-    left: var(--inline-padding);
-    right: var(--inline-padding);
+header{
+    z-index: 900;
+    position: fixed;
+    left: 0;
+    right: 0;
     color: var(--off-white-color);
-    /* display: flex;
-    justify-content: space-between;
-    align-items: center; */
+    width: 100%;
+    padding-block: 20px;
+    border-bottom: 1px solid var(--soft-gray);
+    transition: .3s;
 }
-.hero__head-underline{
-    content: "";
-    position: absolute;
-    background-color: var(--off-white-color);
-    left: calc(-1 * var(--inline-padding));
-    bottom: -25px;
-    height: 1.5px;
-    width: calc(100% + calc(2* var(--inline-padding)));
+
+
+header.light{
+    background-color: white;
+    color: var(--type-color);
 }
-.hero__logo_search_field{
+header .header__logo img[data-background=light]{
+    display: none;
+}
+header.light .header__logo img[data-background=light]{
+    display: block;
+}
+header.light .header__logo img[data-background=transparent]{
+    display: none;
+}
+header.light .fa-chevron-down{
+    color: var(--accent-color);
+}
+.header__head{
+    
+}
+
+.header__logo_search_field{
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.hero__search_option{
+.header__logo{
+    width: 180px;
+    aspect-ratio: 3.3;
+}
+.header__search_option{
     position: relative;
-    font-size: 1.75rem;
+    font-size: 1.8rem;
     cursor: pointer;
 }
-.hero__search_option::after{
+.header__search_option::after{
     content: "";
     position: absolute;
     left: 0;
@@ -470,21 +486,51 @@ footer .copyright{
     width: 100%;
     background-color: var(--accent-color);
 }
-.hero__nav_bar{
+nav .header__main-menu{
     display: flex;
-    gap: 3.2rem;
+    gap: 3.5rem;
     margin-top: 30px;
 }
-.hero__nav_option{
+.header__nav_option{
     display: flex;
     align-items: center;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     gap: .7rem;
     cursor: pointer;
 }
+.header__nav_option .fa-chevron-down{
+    font-size: 1.1rem;
+}
+
+.header__submenu{
+    background-color: white;
+    height: 0px;
+    overflow: hidden;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 0;
+    transition: .3s;
+    color: var(--type-color);
+}
+.header__submenu__placeholder{
+    transition: .3s;
+    padding-block: calc(var(--margin-block) * 1);
+}
+.header__submenu__content h3{
+     margin-bottom: 2.7rem;
+}
+.header__submenu__content .submenu-list{
+     display: flex;
+     flex-direction: column;
+     gap: 1.5rem;
+     list-style: none;
+}
+
+
+
 
 /* articles gallery section */
-
 .articles-gallery{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

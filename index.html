@@ -27,43 +27,106 @@
         <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     </head>
     <body>
+        <header class="header">
+            <div class="header__head container">
+                <div class="header__logo_search_field">
+                    <div class="img header__logo">
+                        <img
+                            src="/assets/img/alNahdaLogo.svg"
+                            alt="AlNahda Logo"
+                            srcset=""
+                            width="225px"
+                            data-background="transparent"
+                        />
+                        <img
+                            src="/assets/img/alNahdaLogo_dark.svg"
+                            alt="AlNahda Logo"
+                            srcset=""
+                            width="225px"
+                            data-background="light"
+                        />
+                    </div>
+                    <div class="header__search_option">Search</div>
+                </div>
+                <nav class="header__nav_bar">
+                    <div class="header__main-menu">
+                        <div class="header__nav_option" data-nav="topics">
+                            <span>Topics</span>
+                            <i class="fa fa-chevron-down"></i>
+                        </div>
+                        <div class="header__nav_option" data-nav="publications">
+                            <span>Publications & Resources</span>
+                            <i class="fa fa-chevron-down"></i>
+                        </div>
+                        <div class="header__nav_option">
+                            <span>Events</span>
+                        </div>
+                        <div class="header__nav_option">
+                            <span>Networks</span>
+                            <i class="fa fa-chevron-down"></i>
+                        </div>
+                        <div class="header__nav_option">
+                            <span>About Us</span>
+                            <i class="fa fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="header__submenu">
+                        <div
+                            class="container header__submenu__placeholder"
+                        ></div>
+                        <template data-nav="topics">
+                            <div class="header__submenu__content">
+                                <h3 class="card-title">Topics themes</h3>
+                                <ul class="submenu-list">
+                                    <li class="submenu-item">
+                                        Arab Transformations and Al Nahda
+                                    </li>
+                                    <li class="submenu-item">
+                                        Access to Justice
+                                    </li>
+                                    <li class="submenu-item">
+                                        Social Protection and Economic
+                                        Development
+                                    </li>
+                                    <li class="submenu-item">
+                                        The Question of Palestine
+                                    </li>
+                                    <li class="submenu-item">
+                                        Migration, Forced Displacement, and
+                                        statelessness in the Arab World
+                                    </li>
+                                    <li class="submenu-item">
+                                        Gender Justice and Youth Empowerment
+                                    </li>
+                                </ul>
+                            </div>
+                        </template>
+
+                        <template data-nav="publications">
+                            <div class="header__submenu__content">
+                                <h3 class="card-title">Publications and Resources</h3>
+                                <ul class="submenu-list">
+                                    <li class="submenu-item">
+                                        Reports & Studies
+                                    </li>
+                                    <li class="submenu-item">
+                                        Policy Briefs
+                                    </li>
+                                    <li class="submenu-item">
+                                        Books
+                                    </li>
+                                </ul>
+                            </div>
+                        </template>
+                    </div>
+                </nav>
+            </div>
+        </header>
         <main>
             <section class="hero__section">
                 <div class="img hero__image">
                     <img src="/assets/img/image00001.jpeg" alt="exmaple" />
                 </div>
-                <div class="hero__head">
-                    <div class="hero__logo_search_field">
-                        <div class="hero__logo">
-                            <img src="/assets/img/alNahdaLogo.svg" alt="AlNahda Logo" srcset="" width="225px">
-                        </div>
-                        <div class="hero__search_option">
-                            Search
-                        </div>
-                        <div class="hero__head-underline"></div>
-                    </div>   
-                    <div class="hero__nav_bar">
-                        <div class="hero__nav_option">
-                            <span>Topics</span>
-                            <img src="/assets/img/arrow.svg" alt="" width="17px">
-                        </div>
-                        <div class="hero__nav_option">
-                            <span>Publications & Resources</span>
-                            <img src="/assets/img/arrow.svg" alt="" width="17px">
-                        </div>
-                        <div class="hero__nav_option">
-                            <span>Events</span>
-                        </div>
-                        <div class="hero__nav_option">
-                            <span>Networks</span>
-                            <img src="/assets/img/arrow.svg" alt="" width="17px">
-                        </div>
-                        <div class="hero__nav_option">
-                            <span>About Us</span>
-                            <img src="/assets/img/arrow.svg" alt="" width="17px">
-                        </div>
-                    </div>      
-                </div>       
                 <div class="hero__content">
                     <h1 class="hero__title">
                         <a href="#" class="link line-clamp-3">
@@ -259,7 +322,7 @@
                                         </div>
                                     </div>
                                     <div class="card__body">
-                                        <h3 class="card__header">
+                                        <h3 class="card__header card-title">
                                             Al Nahda Thought Center
                                         </h3>
                                         <div class="card__summary line-clamp-3">
@@ -360,7 +423,6 @@
                     <h3 class="card-title">Popular Links</h3>
 
                     <ul class="">
-                        
                         <li class="">
                             <a class="underline-effect" href="#">Nav item</a>
                         </li>
@@ -385,14 +447,11 @@
                         <li class="">
                             <a class="underline-effect" href="#">Nav item</a>
                         </li>
-
                     </ul>
                 </div>
             </section>
             <section class="container-wrapper copyright">
-                <div class="container">
-                    © Al Nahda Thought Center - 2023
-                </div>
+                <div class="container">© Al Nahda Thought Center - 2023</div>
             </section>
         </footer>
 
@@ -410,6 +469,69 @@
                 if (nextEl) nextEl.onclick = () => swiper.slideNext();
                 const prevEl = carousel.querySelector(".carousel-prev-btn");
                 if (prevEl) prevEl.onclick = () => swiper.slidePrev();
+            });
+        </script>
+
+        <script>
+            let activeMenuItem = '';
+
+            const header = document.querySelector('header.header');
+            const mainMenuItems = [
+                ...document.querySelectorAll(
+                    ".header__main-menu .header__nav_option"
+                ),
+            ];
+
+            const subMenu = document.querySelector(".header__submenu");
+            const subMenuPlaceholder = subMenu.querySelector(
+                ".header__submenu__placeholder"
+            );
+
+            const recalculateSubMenuHeight = (cuurentSubMenu) => {
+                if (!cuurentSubMenu) return;
+                if(!cuurentSubMenu.innerHTML){
+                    subMenu.animate(
+                        {
+                            height: "0px",
+                        },
+                        { duration: 300, fill: "forwards" }
+                    );  
+                    return;
+                }
+                const clientBounding = cuurentSubMenu.getBoundingClientRect();
+                const { height } = clientBounding;
+                subMenu.animate(
+                    {
+                        height: height + "px",
+                    },
+                    { duration: 300, fill: "forwards" }
+                );
+            };
+
+            const closeMenu = () => {
+                subMenuPlaceholder.innerHTML = "";
+                header.classList.remove("light");
+                activeMenuItem = '';
+                recalculateSubMenuHeight(subMenuPlaceholder);
+            }
+
+            mainMenuItems.forEach((menuItem) => {
+                menuItem.onclick = () => {
+                    if (!subMenuPlaceholder) return;
+                    const navItemName = menuItem.dataset.nav;
+                    if (!navItemName) return;
+                    if(activeMenuItem === navItemName) return closeMenu()                    
+                    activeMenuItem = navItemName;
+                    let template = document.querySelector(
+                        `template[data-nav=${navItemName}]`
+                    );
+                    if (!template) return;
+                    template = template.content.cloneNode(true);
+                    subMenuPlaceholder.innerHTML = "";
+                    subMenuPlaceholder.appendChild(template);
+                    header.classList.add("light");
+                    recalculateSubMenuHeight(subMenuPlaceholder);
+                };
             });
         </script>
     </body>
