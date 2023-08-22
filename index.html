@@ -255,8 +255,48 @@
                 <div class="carousel-container">
                     <div class="swiper swiper-container">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <a href="#" class="card">
+                            <div class="card-trio swiper-slide">
+                                <a href="#" class="card mobile-horizontal-card">
+                                    <div class="card__media">
+                                        <div class="img img-6_9">
+                                            <img
+                                                src="/assets/img/exampleImg.png"
+                                                alt="exampleImg"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="card__body">
+                                        <h3 class="card__header card-title">
+                                            Al Nahda Thought Center
+                                        </h3>
+                                        <div class="card__summary line-clamp-3">
+                                            This new website will be a portal
+                                            for our users. It contains latest
+                                            news about the are and much more.
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="card mobile-horizontal-card">
+                                    <div class="card__media">
+                                        <div class="img img-6_9">
+                                            <img
+                                                src="/assets/img/exampleImg.png"
+                                                alt="exampleImg"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="card__body">
+                                        <h3 class="card__header card-title">
+                                            Al Nahda Thought Center
+                                        </h3>
+                                        <div class="card__summary line-clamp-3">
+                                            This new website will be a portal
+                                            for our users. It contains latest
+                                            news about the are and much more.
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="card mobile-horizontal-card">
                                     <div class="card__media">
                                         <div class="img img-6_9">
                                             <img
@@ -277,8 +317,8 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="swiper-slide">
-                                <a href="#" class="card">
+                            <div class="card-trio swiper-slide">
+                                <a href="#" class="card mobile-horizontal-card">
                                     <div class="card__media">
                                         <div class="img img-6_9">
                                             <img
@@ -298,9 +338,7 @@
                                         </div>
                                     </div>
                                 </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#" class="card">
+                                <a href="#" class="card mobile-horizontal-card">
                                     <div class="card__media">
                                         <div class="img img-6_9">
                                             <img
@@ -320,75 +358,7 @@
                                         </div>
                                     </div>
                                 </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#" class="card">
-                                    <div class="card__media">
-                                        <div class="img img-6_9">
-                                            <img
-                                                src="/assets/img/exampleImg.png"
-                                                alt="exampleImg"
-                                            />
-                                        </div>
-                                    </div>
-                                    <div class="card__body">
-                                        <h3 class="card__header card-title">
-                                            Al Nahda Thought Center
-                                        </h3>
-                                        <div class="card__summary line-clamp-3">
-                                            This new website will be a portal
-                                            for our users. It contains latest
-                                            news about the are and much more.
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#" class="card">
-                                    <div class="card__media">
-                                        <div class="img img-6_9">
-                                            <img
-                                                src="/assets/img/exampleImg.png"
-                                                alt="exampleImg"
-                                            />
-                                        </div>
-                                    </div>
-                                    <div class="card__body">
-                                        <h3 class="card__header card-title">
-                                            Al Nahda Thought Center
-                                        </h3>
-                                        <div class="card__summary line-clamp-3">
-                                            This new website will be a portal
-                                            for our users. It contains latest
-                                            news about the are and much more.
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#" class="card">
-                                    <div class="card__media">
-                                        <div class="img img-6_9">
-                                            <img
-                                                src="/assets/img/exampleImg.png"
-                                                alt="exampleImg"
-                                            />
-                                        </div>
-                                    </div>
-                                    <div class="card__body">
-                                        <h3 class="card__header card-title">
-                                            Al Nahda Thought Center
-                                        </h3>
-                                        <div class="card__summary line-clamp-3">
-                                            This new website will be a portal
-                                            for our users. It contains latest
-                                            news about the are and much more.
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#" class="card">
+                                <a href="#" class="card mobile-horizontal-card">
                                     <div class="card__media">
                                         <div class="img img-6_9">
                                             <img
@@ -413,7 +383,7 @@
                         <div class="swiper-pagination"></div>
                     </div>
 
-                    <div class="carousel-next-btn">
+                    <div class="carousel-next-btn hide-on-tablet hide-on-mobile">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="13"
@@ -430,7 +400,7 @@
                             />
                         </svg>
                     </div>
-                    <div class="carousel-prev-btn">
+                    <div class="carousel-prev-btn hide-on-tablet hide-on-mobile">
                         <svg
                             width="13"
                             height="24"
@@ -539,8 +509,8 @@
             carousels.forEach((carousel) => {
                 const swiperEl = carousel.querySelector(".swiper");
                 const swiper = new Swiper(swiperEl, {
-                    slidesPerView: 3,
-                    spaceBetween: 10,
+                    slidesPerView: 1,
+                    // spaceBetween: 10,
                 });
                 const nextEl = carousel.querySelector(".carousel-next-btn");
                 if (nextEl) nextEl.onclick = () => swiper.slideNext();

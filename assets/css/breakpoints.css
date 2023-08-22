@@ -67,12 +67,38 @@
   }
 
   /* carousel */
+  .card-trio{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
   .carousel-next-btn{
     right: -5rem;
   }
   .carousel-prev-btn{
     left: -5rem;
   }
+  
+
+
+
+
+  /* cards */
+  .mobile-horizontal-card{
+    flex-direction: row;
+  }
+  .mobile-horizontal-card .card__media{
+    width: 40%;
+    min-width: 30%;
+    order: 2;
+  }
+  .mobile-horizontal-card .img-6_9{
+    padding-top: 0;
+    height: 100%;
+  }
+  .mobile-horizontal-card .card-title{
+    font-size: 1.6rem;
+  }
+
 
 
   /* util */
@@ -113,15 +139,6 @@
     max-height: 60vh;
   }
 
-
-
-
-  .carousel-next-btn{
-    display: none;
-  }
-  .carousel-prev-btn{
-    display: none;
-  }
 
   .hide-on-mobile{
     display: none;
