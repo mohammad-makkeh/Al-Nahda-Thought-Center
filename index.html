@@ -46,7 +46,16 @@
                             data-background="light"
                         />
                     </div>
-                    <div class="header__search_option">Search</div>
+                    <div class="header__right-group">
+                        <div class="header__search_option">
+                            <span class="hide-on-tablet">Search</span>
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <div class="header__hamburger-menu">
+                            <i class="open-icon fa fa-bars"></i>
+                            <i class="close-icon fa fa-xmark"></i>
+                        </div>
+                    </div>
                 </div>
                 <nav class="header__nav_bar">
                     <div class="header__main-menu">
@@ -71,50 +80,126 @@
                         </div>
                     </div>
                     <div class="header__submenu">
-                        <div
-                            class="container header__submenu__placeholder"
-                        ></div>
+                        <div class="container header__placeholders-wrapper">
+                            <div class="header__submenu__placeholder"></div>
+                            <div class="header__subsubmenu__placeholder"></div>
+                        </div>
                         <template data-nav="topics">
                             <div class="header__submenu__content">
                                 <h3 class="card-title">Topics themes</h3>
                                 <ul class="submenu-list">
-                                    <li class="submenu-item">
-                                        Arab Transformations and Al Nahda
+                                    <li
+                                        class="submenu-item"
+                                        data-submenu="arab_transformations_and_al_nahda"
+                                    >
+                                        <a href="#">
+                                            Arab Transformations and Al Nahda
+                                        </a>
+                                    </li>
+                                    <li
+                                        class="submenu-item"
+                                        data-submenu="access_to_justice"
+                                    >
+                                        <a href="#"> Access to Justice </a>
                                     </li>
                                     <li class="submenu-item">
-                                        Access to Justice
+                                        <a href="#">
+                                            Social Protection and Economic
+                                            Development
+                                        </a>
                                     </li>
                                     <li class="submenu-item">
-                                        Social Protection and Economic
-                                        Development
+                                        <a href="#">
+                                            The Question of Palestine
+                                        </a>
                                     </li>
                                     <li class="submenu-item">
-                                        The Question of Palestine
+                                        <a href="#">
+                                            Migration, Forced Displacement, and
+                                            statelessness in the Arab World
+                                        </a>
                                     </li>
                                     <li class="submenu-item">
-                                        Migration, Forced Displacement, and
-                                        statelessness in the Arab World
-                                    </li>
-                                    <li class="submenu-item">
-                                        Gender Justice and Youth Empowerment
+                                        <a href="#">
+                                            Gender Justice and Youth Empowerment
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
+
+                            <template
+                                data-submenu="arab_transformations_and_al_nahda"
+                            >
+                                <div class="header__subsubmenu__content">
+                                    <ul class="submenu-list">
+                                        <li class="submenu-item">
+                                            <a href="#">
+                                                Revival of Al Nahda Talks
+                                            </a>
+                                        </li>
+                                        <li class="submenu-item">
+                                            <a href="#">
+                                                Peace and Conflict in the Arab
+                                                World
+                                            </a>
+                                        </li>
+                                        <li class="submenu-item">
+                                            <a href="#">
+                                                Civic Space and Society
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </template>
+
+                            <template data-submenu="access_to_justice">
+                                <div class="header__subsubmenu__content">
+                                    <ul class="submenu-list">
+                                        <li class="submenu-item">
+                                            <a href="#"> Legal Aid </a>
+                                        </li>
+                                        <li class="submenu-item">
+                                            <a href="#">
+                                                Women’s Access to Justice
+                                            </a>
+                                        </li>
+                                        <li class="submenu-item">
+                                            <a href="#">
+                                                Children´s Access to Justice
+                                            </a>
+                                        </li>
+                                        <li class="submenu-item">
+                                            <a href="#">
+                                                Combating Narcotics and Drugs
+                                            </a>
+                                        </li>
+                                        <li class="submenu-item">
+                                            <a href="#">
+                                                Right to Health and
+                                                Accountability
+                                            </a>
+                                        </li>
+                                        <li class="submenu-item">
+                                            <a href="#">
+                                                Justice Sector Reform
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </template>
                         </template>
 
                         <template data-nav="publications">
                             <div class="header__submenu__content">
-                                <h3 class="card-title">Publications and Resources</h3>
+                                <h3 class="card-title">
+                                    Publications and Resources
+                                </h3>
                                 <ul class="submenu-list">
                                     <li class="submenu-item">
                                         Reports & Studies
                                     </li>
-                                    <li class="submenu-item">
-                                        Policy Briefs
-                                    </li>
-                                    <li class="submenu-item">
-                                        Books
-                                    </li>
+                                    <li class="submenu-item">Policy Briefs</li>
+                                    <li class="submenu-item">Books</li>
                                 </ul>
                             </div>
                         </template>
@@ -161,16 +246,7 @@
                     </div>
                 </div>
             </section>
-            <section class="articles-gallery">
-                <div class="articles-gallery-row1">
-                    <div>t1</div>
-                    <div>t2</div>
-                </div>
-                <div class="articles-gallery-row2">
-                    <div>t3</div>
-                    <div>t4</div>
-                    <div>t5</div>
-                </div>
+            <section class="container block-section gallery">
             </section>
             <section
                 class="container block-section carousel-section titled-section"
@@ -455,6 +531,7 @@
             </section>
         </footer>
 
+        <!-- carousels -->
         <script>
             const carousels = Array.from(
                 document.querySelectorAll(".carousel-container")
@@ -472,30 +549,43 @@
             });
         </script>
 
+        <!-- header -->
         <script>
-            let activeMenuItem = '';
+            let activeMenuItem,
+                activeSubmenuItem,
+                headerBackgroundChangethreshold = 150,
+                menuOpened = false;
 
-            const header = document.querySelector('header.header');
+            const header = document.querySelector("header.header");
+            const navbar = header.querySelector(".header__nav_bar");
             const mainMenuItems = [
-                ...document.querySelectorAll(
+                ...header.querySelectorAll(
                     ".header__main-menu .header__nav_option"
                 ),
             ];
-
-            const subMenu = document.querySelector(".header__submenu");
+            const subMenu = header.querySelector(".header__submenu");
             const subMenuPlaceholder = subMenu.querySelector(
                 ".header__submenu__placeholder"
+            );
+            const subSubMenuPlaceholder = subMenu.querySelector(
+                ".header__subsubmenu__placeholder"
+            );
+            const openMenuBtn = header.querySelector(
+                ".header__hamburger-menu .open-icon"
+            );
+            const closeMenuBtn = header.querySelector(
+                ".header__hamburger-menu .close-icon"
             );
 
             const recalculateSubMenuHeight = (cuurentSubMenu) => {
                 if (!cuurentSubMenu) return;
-                if(!cuurentSubMenu.innerHTML){
+                if (!cuurentSubMenu.innerHTML) {
                     subMenu.animate(
                         {
                             height: "0px",
                         },
                         { duration: 300, fill: "forwards" }
-                    );  
+                    );
                     return;
                 }
                 const clientBounding = cuurentSubMenu.getBoundingClientRect();
@@ -508,30 +598,102 @@
                 );
             };
 
-            const closeMenu = () => {
+            const closeSubmenu = () => {
                 subMenuPlaceholder.innerHTML = "";
+                if (window.scrollY <= headerBackgroundChangethreshold)
                 header.classList.remove("light");
-                activeMenuItem = '';
-                recalculateSubMenuHeight(subMenuPlaceholder);
-            }
+            activeMenuItem = "";
+            recalculateSubMenuHeight(subMenuPlaceholder);
+        };
+        
+        const addListenersToSubmenus = (submenu) => {
+                const submenuItems = [
+                    ...submenu.querySelectorAll(".submenu-item"),
+                ];
+                submenuItems.forEach((subMenuItem) => {
+                    if (!subSubMenuPlaceholder) return;
+                    const getTemplate = (subMenuItem) => {
+                        const submenuName = subMenuItem.dataset.submenu;
+                        if (!submenuName) return;
+                        if (activeSubmenuItem === submenuName) return;
+                        activeSubmenuItem = submenuName;
+                        let template = document.querySelector(
+                            `template[data-submenu=${submenuName}]`
+                        );
+                        if (!template) return;
+                        template = template.content.cloneNode(true);
+                        return template;
+                    };
+                    if (window.innerWidth > 900) {
+                        if (subMenuItem.onmouseenter) return;
+                        subMenuItem.onmouseenter = () => {
+                            const template = getTemplate(subMenuItem);
+                            subSubMenuPlaceholder.innerHTML = "";
+                            subSubMenuPlaceholder.appendChild(template);
+                        };
+                    } else {
+                        subMenuItem.onclick = () => {
+                            const template = getTemplate(subMenuItem);
+                            subSubMenuPlaceholder.innerHTML = "";
+                            subSubMenuPlaceholder.appendChild(template);
+                        };
+                    }
+                });
+            };
 
-            mainMenuItems.forEach((menuItem) => {
-                menuItem.onclick = () => {
+            const addClickListenersToMenuItems = () => {
+                mainMenuItems.forEach((menuItem) => {
                     if (!subMenuPlaceholder) return;
-                    const navItemName = menuItem.dataset.nav;
-                    if (!navItemName) return;
-                    if(activeMenuItem === navItemName) return closeMenu()                    
-                    activeMenuItem = navItemName;
-                    let template = document.querySelector(
-                        `template[data-nav=${navItemName}]`
-                    );
-                    if (!template) return;
-                    template = template.content.cloneNode(true);
-                    subMenuPlaceholder.innerHTML = "";
-                    subMenuPlaceholder.appendChild(template);
+                    if (window.innerWidth > 900)
+                        menuItem.onclick = () => {
+                            const navItemName = menuItem.dataset.nav;
+                            if (!navItemName) return;
+                            if (activeMenuItem === navItemName)
+                                return closeSubmenu();
+                            activeMenuItem = navItemName;
+                            activeSubmenuItem = "";
+                            subSubMenuPlaceholder.innerHTML = "";
+                            let template = document.querySelector(
+                                `template[data-nav=${navItemName}]`
+                            );
+                            if (!template) return;
+                            template = template.content.cloneNode(true);
+                            subMenuPlaceholder.innerHTML = "";
+                            subMenuPlaceholder.appendChild(template);
+                            addListenersToSubmenus(subMenuPlaceholder);
+                            header.classList.add("light");
+                            recalculateSubMenuHeight(subMenuPlaceholder);
+                        };
+                    else menuItem.onclick = () => {};
+                });
+            };
+            addClickListenersToMenuItems();
+
+            openMenuBtn.onclick = () => {
+                navbar.classList.add("menu-opened");
+                openMenuBtn.style.display = "none";
+                closeMenuBtn.style.display = "block";
+                menuOpened = true;
+                header.classList.add("light");
+            };
+            closeMenuBtn.onclick = () => {
+                navbar.classList.remove("menu-opened");
+                openMenuBtn.style.display = "block";
+                closeMenuBtn.style.display = "none";
+                menuOpened = false;
+                if (window.scrollY <= headerBackgroundChangethreshold)
+                    header.classList.remove("light");
+            };
+
+            window.addEventListener("scroll", (e) => {
+                if (window.scrollY > headerBackgroundChangethreshold)
                     header.classList.add("light");
-                    recalculateSubMenuHeight(subMenuPlaceholder);
-                };
+                else if (!activeMenuItem && !menuOpened)
+                    header.classList.remove("light");
+            });
+
+            window.addEventListener("resize", (e) => {
+                addClickListenersToMenuItems();
             });
         </script>
     </body>

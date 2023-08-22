@@ -1,3 +1,129 @@
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1200px) {
+  :root {
+    --inline-padding: 12rem;
+    --margin-block: 4rem;
+  }
+
+  .hero__content .hero__title a{
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  :root {
+    --inline-padding: 6rem;
+    --margin-block: 3rem;
+  }
+
+  .header__logo{
+    width: 16rem;
+  }
   
+  /* nav */
+  .header__nav_bar{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    background-color: white;
+    color: black;
+    display: none;
+  }
+  .header__nav_bar.menu-opened{
+    display: block;
+  }
+  .header__nav_bar .header__main-menu{
+    flex-direction: column;
+    gap: 0;
+    margin-top: 0;
+  }
+  .header__main-menu .header__nav_option{
+    padding-inline: var(--inline-padding);
+    padding-block: 1.6rem;
+    border-bottom: 1px solid var(--soft-gray);
+  }
+  .header__main-menu .header__nav_option .fa-chevron-down{
+    rotate: -90deg;
+    color: var(--accent-color);
+    margin-left: 10px;
+  }
+  .header__hamburger-menu{
+    display: flex;
+    font-size: 2.4rem;
+    cursor: pointer;
+  }
+  .header__search_option .fa-search{
+    display: block;
+    font-size: 2rem;
+  }
+
+
+
+  /* hero */
+  .hero__section .hero__content{
+    max-width: 80%;
+    bottom: 2rem;
+  }
+
+  /* carousel */
+  .carousel-next-btn{
+    right: -5rem;
+  }
+  .carousel-prev-btn{
+    left: -5rem;
+  }
+
+
+  /* util */
+  .hide-on-tablet{
+    display: none;
+  }
+  .hero__content .hero__meta{
+    gap: 1.6rem;
+  }
+  .meta{
+    font-size: 1rem;
+  }
+  p {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  :root {
+    --inline-padding: 2rem;
+    --margin-block: 2rem;
+  }
+
+  .header__logo{
+    width: 12rem;
+  }
+
+  /* hero */
+  .hero__section .hero__content{
+    gap: 1.6rem;
+  }
+  .hero__content .hero__title a{
+    font-size: 2rem;
+  }
+  .hero__section{
+    height: 60vh;
+    min-height: 60vh;
+    max-height: 60vh;
+  }
+
+
+
+
+  .carousel-next-btn{
+    display: none;
+  }
+  .carousel-prev-btn{
+    display: none;
+  }
+
+  .hide-on-mobile{
+    display: none;
+  }
 }
