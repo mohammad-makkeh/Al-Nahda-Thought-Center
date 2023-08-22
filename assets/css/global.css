@@ -326,7 +326,53 @@ carousel swiper
     padding-right: 0.3rem;
 }
 
+/*
+*
+*
+*
+status
+*
+*
+*
+*/
+.status-field{
+    color: white;
+    background-color: #c20002;
+}
+.status-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.status-field-cards{
+    display: flex;
+    flex-direction: column;
+}
+.status-card:nth-child(even){
+    align-self: end;
+    justify-content: end;
+}
+.status-header{
+    color: white;
+}
+.status-card{
+    width: 500px;
+    aspect-ratio: 5;
+    background-color: #4d0101;
+    border: 1px solid gray;
+    padding: 10px 5px;
+    display: flex;
+}
+.status-card-content{
+    display: flex;
+    align-items: center;
+    width: 425px;
+    gap: 7px;
+}
 
+/* .status-card-content:nth-child(odd){
+    
+} */
 /*
 *
 *
