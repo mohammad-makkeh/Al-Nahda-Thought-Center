@@ -380,7 +380,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="swiper-pagination"></div>
+                        
                     </div>
 
                     <div class="carousel-next-btn hide-on-tablet hide-on-mobile">
@@ -417,6 +417,7 @@
                             />
                         </svg>
                     </div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </section>
         </main>
@@ -510,7 +511,10 @@
                 const swiperEl = carousel.querySelector(".swiper");
                 const swiper = new Swiper(swiperEl, {
                     slidesPerView: 1,
-                    // spaceBetween: 10,
+                    spaceBetween: 2,
+                    pagination: {
+                        el: '.swiper-pagination',
+                    }
                 });
                 const nextEl = carousel.querySelector(".carousel-next-btn");
                 if (nextEl) nextEl.onclick = () => swiper.slideNext();

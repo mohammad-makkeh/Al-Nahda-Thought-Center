@@ -101,6 +101,20 @@
 
 
 
+  /* footer */
+  footer .social-reach {
+    flex-direction: column;
+    justify-content: start;
+    gap: 40px;
+  }
+  footer .social-reach .email-collector{
+    max-width: 100%;
+  }
+  footer .social-reach .social-follow{
+    max-width: 100%;
+  }
+
+
   /* util */
   .hide-on-tablet{
     display: none;
@@ -119,7 +133,7 @@
 @media screen and (max-width: 500px) {
   :root {
     --inline-padding: 2rem;
-    --margin-block: 2rem;
+    --margin-block: 4rem;
   }
 
   .header__logo{
