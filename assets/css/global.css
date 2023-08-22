@@ -14,6 +14,8 @@
     --soft-gray: #e6e6e6;
     --type-color: #101010;
 
+    --swiper-theme-color: var(--accent-color);
+
     --carousel-items-spacing: 1rem;
     --card-border-radius: 6px;
 
@@ -280,11 +282,11 @@ carousel swiper
 .swiper .swiper-wrapper {
     position: relative;
     display: flex;
-    /* justify-content: stretch; */
+    padding-bottom: 40px;
 }
-/* .swiper-slide {
-    padding-right: var(--carousel-items-spacing);
-} */
+.swiper-pagination {
+    /* bottom: -22px !important; */
+}
 .card-trio{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
