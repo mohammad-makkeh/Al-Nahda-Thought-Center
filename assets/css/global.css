@@ -740,7 +740,7 @@ nav .header__main-menu {
 .header__submenu__placeholder,
 .header__subsubmenu__placeholder {
     transition: 0.3s;
-    padding-block: calc(var(--margin-block) * 1);
+    padding-block: calc(var(--margin-block) * 0.6);
 }
 .header__submenu__content h3 {
     margin-bottom: 2.7rem;
