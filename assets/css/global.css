@@ -24,7 +24,6 @@
 
     --container-width: calc(100vw - calc(2 * var(--inline-padding)));
 
-
     /* bootstrap customizations */
     --bs-body-bg: #ecedf2;
 }
@@ -174,8 +173,7 @@ hero
     position: absolute;
     width: 100%;
     height: 100%;
-    top: 0;
-    left: 0;
+    inset: 0;
 }
 .hero__section .hero__image::after {
     content: "";
@@ -234,8 +232,6 @@ sections
 .section-title {
     margin-bottom: 2rem;
     font-weight: 600;
-}
-.titled-section .section-title {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -327,66 +323,49 @@ cards
 }
 
 /* another variant of event metadata */
-.event-metadata__datetime__variant-raw-text{
+.event-metadata__datetime__variant-raw-text {
     color: var(--accent-color);
     display: flex;
     align-items: flex-end;
-    gap: .5rem;
+    gap: 0.5rem;
 }
 
-.event-metadata__datetime__variant-raw-text .day-of-month{
+.event-metadata__datetime__variant-raw-text .day-of-month {
     font-size: 4rem;
     font-weight: 600;
-    line-height: .8;
+    line-height: 0.8;
 }
 
-.event-metadata__datetime__variant-raw-text .rest-of-date{
+.event-metadata__datetime__variant-raw-text .rest-of-date {
     font-weight: 600;
     font-size: 1.3rem;
 }
 
-
-
 /* support-us-banner */
 
-.support-us-banner{
+.support-us-banner {
     border-radius: var(--card-border-radius);
     background-color: white;
     overflow: hidden;
 }
 
-.support-us-banner .support-us-banner__content{
-    padding: 30px 40px;    
+.support-us-banner .support-us-banner__content {
+    padding: 30px 40px;
 }
-.support-us-banner .support-us-banner__content h2{
+.support-us-banner .support-us-banner__content h2 {
     margin-bottom: 1rem;
 }
 
-.support-us-banner .support-us-banner__media-container .support-us-cta{
+.support-us-banner .support-us-banner__media-container .support-us-cta {
     position: absolute;
     top: 50%;
     left: 5rem;
     transform: translateY(-50%);
     background-color: var(--accent-color);
     color: white;
-    padding: .8rem 2rem;
+    padding: 0.8rem 2rem;
     border-radius: 4px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*
 *
@@ -536,45 +515,43 @@ footer {
     background-color: white;
 }
 
-footer section {
+footer .footer-section {
     padding-block: calc(var(--margin-block) * 0.4);
     border-bottom: 1px solid var(--off-white-color);
 }
 
-footer  .email-collector .email-input {
+.email-collector .email-input {
     display: flex;
     border-radius: var(--card-border-radius);
     overflow: hidden;
 }
-footer  .email-collector .email-input input[type="email"] {
+.email-collector .email-input input[type="email"] {
     background-color: var(--off-white-color);
     padding: 1rem 1.5rem;
     font-size: 1.6rem;
     flex-grow: 1;
 }
-footer
-    .email-collector
-    .email-input
-    input[type="email"]::placeholder {
+
+.email-collector .email-input input[type="email"]::placeholder {
     opacity: 0.8;
 }
-footer  .email-collector .email-input button {
+.email-collector .email-input button {
     padding: 1rem 1.5rem;
     background-color: var(--accent-color);
     color: white;
 }
-footer  .social-follow {
+.social-follow {
     max-width: 40%;
 }
-footer  .social-follow h3 {
+.social-follow h3 {
     margin-bottom: 2rem;
 }
-footer  .social-follow .social-list {
+.social-follow .social-list {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
 }
-footer  .social-follow .social-list .social-icon {
+.social-follow .social-list .social-icon {
     display: grid;
     place-items: center;
     width: 4rem;
@@ -586,12 +563,12 @@ footer  .social-follow .social-list .social-icon {
     font-size: 1.8rem;
     color: var(--accent-color);
 }
-footer  .social-follow .social-list .social-icon:hover {
+.social-follow .social-list .social-icon:hover {
     color: white;
     background-color: var(--accent-color);
 }
 
-footer .popular-links ul {
+.popular-links ul {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -600,8 +577,7 @@ footer .popular-links ul {
     max-width: 60%;
 }
 
-
-footer .copyright {
+.copyright {
     padding-block: 1.5rem;
 }
 
@@ -728,5 +704,3 @@ nav .header__main-menu {
     border-left: 1px solid var(--soft-gray);
     padding-left: 3rem;
 }
-
-
