@@ -265,7 +265,12 @@ cards
 .card__header {
     margin-bottom: 1rem;
 }
-
+.card__content{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-grow: 1;
+}
 .card__body {
     display: flex;
     flex-direction: column;
@@ -278,6 +283,27 @@ cards
 .card__footer {
     margin-top: auto;
     padding: 1.65rem;
+}
+
+/* horizontal card */
+.card.horizontal-card{
+    flex-direction: row;
+    height: 100%;
+}
+.card.horizontal-card .img-6_9{
+    padding-top: 0px;
+    height: 100%;
+}
+.card.horizontal-card .card__media{
+    min-width: 40%;
+    border-radius: var(--card-border-radius) 0 0 var(--card-border-radius);
+}
+.card.horizontal-card .card__summary{
+    display: none;
+}
+
+.row .card{
+    height: 100%;
 }
 
 .event-metadata {
@@ -341,8 +367,9 @@ cards
     font-size: 1.3rem;
 }
 
-/* support-us-banner */
 
+
+/* support-us-banner */
 .support-us-banner {
     border-radius: var(--card-border-radius);
     background-color: white;
@@ -386,6 +413,9 @@ carousel swiper
     position: relative;
     display: flex;
     padding-bottom: 40px;
+}
+.swiper-wrapper .swiper-slide{
+    height: 100%;
 }
 .swiper-pagination {
     /* bottom: -22px !important; */
