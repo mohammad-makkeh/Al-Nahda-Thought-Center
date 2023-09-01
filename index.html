@@ -36,7 +36,7 @@
         <header class="header">
             <div class="header__head container">
                 <div class="header__logo_search_field">
-                    <div class="img header__logo">
+                    <a href="/" class="img header__logo">
                         <img
                             src="/assets/img/alNahdaLogo.svg"
                             alt="AlNahda Logo"
@@ -51,7 +51,7 @@
                             width="225px"
                             data-background="light"
                         />
-                    </div>
+                    </a>
                     <div class="header__right-group">
                         <div class="header__search_option">
                             <span class="hide-on-tablet">Search</span>
@@ -88,17 +88,18 @@
                     <div class="header__submenu">
                         <div class="container header__placeholders-wrapper">
                             <div class="header__submenu__placeholder"></div>
+                            <div class="header__submenu__separator"></div>
                             <div class="header__subsubmenu__placeholder"></div>
                         </div>
                         <template data-nav="topics">
                             <div class="header__submenu__content">
-                                <h3 class="card-title">Topics themes</h3>
+                                <h3 class="card-title">Topic Themes</h3>
                                 <ul class="submenu-list">
                                     <li
                                         class="submenu-item"
                                         data-submenu="arab_transformations_and_al_nahda"
                                     >
-                                        <a href="#">
+                                        <a href="/topics.html">
                                             Arab Transformations and Al Nahda
                                         </a>
                                     </li>
@@ -137,6 +138,7 @@
                                 data-submenu="arab_transformations_and_al_nahda"
                             >
                                 <div class="header__subsubmenu__content">
+                                    <h3 class="card-title" id="subsubmenu-title"></h3>
                                     <ul class="submenu-list">
                                         <li class="submenu-item">
                                             <a href="#">
@@ -160,6 +162,7 @@
 
                             <template data-submenu="access_to_justice">
                                 <div class="header__subsubmenu__content">
+                                    <h3 class="card-title" id="subsubmenu-title"></h3>
                                     <ul class="submenu-list">
                                         <li class="submenu-item">
                                             <a href="#"> Legal Aid </a>
@@ -2068,153 +2071,161 @@
             });
         </script>
 
-        <!-- header -->
-        <script>
-            let activeMenuItem,
-                activeSubmenuItem,
-                headerBackgroundChangethreshold = 150,
-                menuOpened = false;
+       <!-- header -->
+       <script>
+        let activeMenuItem,
+            activeSubmenuItem,
+            headerBackgroundChangethreshold = 150,
+            menuOpened = false;
 
-            const header = document.querySelector("header.header");
-            const navbar = header.querySelector(".header__nav_bar");
-            const mainMenuItems = [
-                ...header.querySelectorAll(
-                    ".header__main-menu .header__nav_option"
-                ),
-            ];
-            const subMenu = header.querySelector(".header__submenu");
-            const subMenuPlaceholder = subMenu.querySelector(
-                ".header__submenu__placeholder"
-            );
-            const subSubMenuPlaceholder = subMenu.querySelector(
-                ".header__subsubmenu__placeholder"
-            );
-            const openMenuBtn = header.querySelector(
-                ".header__hamburger-menu .open-icon"
-            );
-            const closeMenuBtn = header.querySelector(
-                ".header__hamburger-menu .close-icon"
-            );
+        const header = document.querySelector("header.header");
+        const navbar = header.querySelector(".header__nav_bar");
+        const mainMenuItems = [
+            ...header.querySelectorAll(
+                ".header__main-menu .header__nav_option"
+            ),
+        ];
+        const subMenu = header.querySelector(".header__submenu");
+        const subMenuPlaceholder = subMenu.querySelector(
+            ".header__submenu__placeholder"
+        );
+        const subSubMenuPlaceholder = subMenu.querySelector(
+            ".header__subsubmenu__placeholder"
+        );
+        const submenuSeparator = document.querySelector('.header__submenu__separator');
+        const openMenuBtn = header.querySelector(
+            ".header__hamburger-menu .open-icon"
+        );
+        const closeMenuBtn = header.querySelector(
+            ".header__hamburger-menu .close-icon"
+        );
 
-            const recalculateSubMenuHeight = (cuurentSubMenu) => {
-                if (!cuurentSubMenu) return;
-                if (!cuurentSubMenu.innerHTML) {
-                    subMenu.animate(
-                        {
-                            height: "0px",
-                        },
-                        { duration: 300, fill: "forwards" }
-                    );
-                    return;
-                }
-                const clientBounding = cuurentSubMenu.getBoundingClientRect();
-                const { height } = clientBounding;
+        const recalculateSubMenuHeight = (cuurentSubMenu) => {
+            if (!cuurentSubMenu) return;
+            if (!cuurentSubMenu.innerHTML) {
                 subMenu.animate(
                     {
-                        height: height + "px",
+                        height: "0px",
                     },
                     { duration: 300, fill: "forwards" }
                 );
-            };
+                return;
+            }
+            const clientBounding = cuurentSubMenu.getBoundingClientRect();
+            const { height } = clientBounding;
+            subMenu.animate(
+                {
+                    height: height + "px",
+                },
+                { duration: 300, fill: "forwards" }
+            );
+        };
 
-            const closeSubmenu = () => {
-                subMenuPlaceholder.innerHTML = "";
-                if (window.scrollY <= headerBackgroundChangethreshold)
-                    header.classList.remove("light");
-                activeMenuItem = "";
-                recalculateSubMenuHeight(subMenuPlaceholder);
-            };
+        const closeSubmenu = () => {
+            subMenuPlaceholder.innerHTML = "";
+            if (window.scrollY <= headerBackgroundChangethreshold)
+                header.classList.remove("light");
+            activeMenuItem = "";
+            recalculateSubMenuHeight(subMenuPlaceholder);
+        };
 
-            const addListenersToSubmenus = (submenu) => {
-                const submenuItems = [
-                    ...submenu.querySelectorAll(".submenu-item"),
-                ];
-                submenuItems.forEach((subMenuItem) => {
-                    if (!subSubMenuPlaceholder) return;
-                    const getTemplate = (subMenuItem) => {
-                        const submenuName = subMenuItem.dataset.submenu;
-                        if (!submenuName) return;
-                        if (activeSubmenuItem === submenuName) return;
-                        activeSubmenuItem = submenuName;
+        const addListenersToSubmenus = (submenu) => {
+            const submenuItems = [
+                ...submenu.querySelectorAll(".submenu-item"),
+            ];
+            submenuItems.forEach((subMenuItem) => {
+                if (!subSubMenuPlaceholder) return;
+                
+                const getTemplate = (subMenuItem) => {
+                    const submenuName = subMenuItem.dataset.submenu;
+                    if (!submenuName) return;
+                    if (activeSubmenuItem === submenuName) return;
+                    activeSubmenuItem = submenuName;
+                    submenuSeparator.style.opacity = 1;
+                    let template = document.querySelector(
+                        `template[data-submenu=${submenuName}]`
+                    );
+                    if (!template) return;
+                    template = template.content.cloneNode(true);
+                    return template;
+                };
+
+
+                if (window.innerWidth > 900) {
+                    if (subMenuItem.onmouseenter) return;
+                    subMenuItem.onmouseenter = () => {
+                        const template = getTemplate(subMenuItem);
+                        if(!template) return;
+                        subSubMenuPlaceholder.innerHTML = "";
+                        subSubMenuPlaceholder.appendChild(template);
+                        subSubMenuPlaceholder.querySelector('#subsubmenu-title').innerText = document.querySelector(`li[data-submenu=${subMenuItem.dataset.submenu}]`).innerText;
+                    };
+                } else {
+                    subMenuItem.onclick = () => {
+                        const template = getTemplate(subMenuItem);
+                        subSubMenuPlaceholder.innerHTML = "";
+                        subSubMenuPlaceholder.appendChild(template);
+                    };
+                }
+            });
+        };
+
+        const addClickListenersToMenuItems = () => {
+            mainMenuItems.forEach((menuItem) => {
+                if (!subMenuPlaceholder) return;
+                if (window.innerWidth > 900)
+                    menuItem.onclick = () => {
+                        const navItemName = menuItem.dataset.nav;
+                        if (!navItemName) return;
+                        if (activeMenuItem === navItemName)
+                            return closeSubmenu();
+                        activeMenuItem = navItemName;
+                        activeSubmenuItem = "";
+                        submenuSeparator.style.opacity = 0;
+                        subSubMenuPlaceholder.innerHTML = "";
                         let template = document.querySelector(
-                            `template[data-submenu=${submenuName}]`
+                            `template[data-nav=${navItemName}]`
                         );
                         if (!template) return;
                         template = template.content.cloneNode(true);
-                        return template;
+                        subMenuPlaceholder.innerHTML = "";
+                        subMenuPlaceholder.appendChild(template);
+                        addListenersToSubmenus(subMenuPlaceholder);
+                        header.classList.add("light");
+                        recalculateSubMenuHeight(subMenuPlaceholder);
                     };
-                    if (window.innerWidth > 900) {
-                        if (subMenuItem.onmouseenter) return;
-                        subMenuItem.onmouseenter = () => {
-                            const template = getTemplate(subMenuItem);
-                            subSubMenuPlaceholder.innerHTML = "";
-                            subSubMenuPlaceholder.appendChild(template);
-                        };
-                    } else {
-                        subMenuItem.onclick = () => {
-                            const template = getTemplate(subMenuItem);
-                            subSubMenuPlaceholder.innerHTML = "";
-                            subSubMenuPlaceholder.appendChild(template);
-                        };
-                    }
-                });
-            };
+                else menuItem.onclick = () => {};
+            });
+        };
+        addClickListenersToMenuItems();
 
-            const addClickListenersToMenuItems = () => {
-                mainMenuItems.forEach((menuItem) => {
-                    if (!subMenuPlaceholder) return;
-                    if (window.innerWidth > 900)
-                        menuItem.onclick = () => {
-                            const navItemName = menuItem.dataset.nav;
-                            if (!navItemName) return;
-                            if (activeMenuItem === navItemName)
-                                return closeSubmenu();
-                            activeMenuItem = navItemName;
-                            activeSubmenuItem = "";
-                            subSubMenuPlaceholder.innerHTML = "";
-                            let template = document.querySelector(
-                                `template[data-nav=${navItemName}]`
-                            );
-                            if (!template) return;
-                            template = template.content.cloneNode(true);
-                            subMenuPlaceholder.innerHTML = "";
-                            subMenuPlaceholder.appendChild(template);
-                            addListenersToSubmenus(subMenuPlaceholder);
-                            header.classList.add("light");
-                            recalculateSubMenuHeight(subMenuPlaceholder);
-                        };
-                    else menuItem.onclick = () => {};
-                });
-            };
-            addClickListenersToMenuItems();
+        openMenuBtn.onclick = () => {
+            navbar.classList.add("menu-opened");
+            openMenuBtn.style.display = "none";
+            closeMenuBtn.style.display = "block";
+            menuOpened = true;
+            header.classList.add("light");
+        };
+        closeMenuBtn.onclick = () => {
+            navbar.classList.remove("menu-opened");
+            openMenuBtn.style.display = "block";
+            closeMenuBtn.style.display = "none";
+            menuOpened = false;
+            if (window.scrollY <= headerBackgroundChangethreshold)
+                header.classList.remove("light");
+        };
 
-            openMenuBtn.onclick = () => {
-                navbar.classList.add("menu-opened");
-                openMenuBtn.style.display = "none";
-                closeMenuBtn.style.display = "block";
-                menuOpened = true;
+        window.addEventListener("scroll", (e) => {
+            if (window.scrollY > headerBackgroundChangethreshold)
                 header.classList.add("light");
-            };
-            closeMenuBtn.onclick = () => {
-                navbar.classList.remove("menu-opened");
-                openMenuBtn.style.display = "block";
-                closeMenuBtn.style.display = "none";
-                menuOpened = false;
-                if (window.scrollY <= headerBackgroundChangethreshold)
-                    header.classList.remove("light");
-            };
+            else if (!activeMenuItem && !menuOpened)
+                header.classList.remove("light");
+        });
 
-            window.addEventListener("scroll", (e) => {
-                if (window.scrollY > headerBackgroundChangethreshold)
-                    header.classList.add("light");
-                else if (!activeMenuItem && !menuOpened)
-                    header.classList.remove("light");
-            });
-
-            window.addEventListener("resize", (e) => {
-                addClickListenersToMenuItems();
-            });
-        </script>
+        window.addEventListener("resize", (e) => {
+            addClickListenersToMenuItems();
+        });
+    </script>
 
         <!-- interpolate-up for numbers -->
         <script>
