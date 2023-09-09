@@ -18,6 +18,7 @@
 
     --carousel-items-spacing: 1rem;
     --card-border-radius: 6px;
+    --header-height: 150px;
 
     --underline-gradient: linear-gradient(90deg, #e60000, #4d0101);
     --accent-gradient: linear-gradient(135deg, #8c1311, #e4322f);
@@ -47,10 +48,9 @@ utility
 *
 *
 */
-/* .container {
-    margin-inline: auto;
-    max-width: var(--container-width);
-} */
+.pad-header-height{
+    padding-top: var(--header-height);
+}
 
 .img {
     position: relative;
@@ -238,7 +238,11 @@ sections
     align-items: center;
     justify-content: space-between;
 }
-
+.section-title .section-title__desctiption{
+    font-weight: normal;
+    margin-top: 1rem;
+    max-width: 90ch;
+}
 /*
 *
 *
@@ -503,6 +507,7 @@ stats section
     color: white;
     background-image: var(--accent-gradient);
     position: relative;
+    overflow: hidden;
 }
 .stats-container {
     display: flex;
@@ -663,11 +668,18 @@ header.light {
     background-color: white;
     color: var(--type-color);
 }
+header.always-light {
+    background-color: white !important;
+    color: var(--type-color) !important;
+}
 header .header__logo img[data-background="light"] {
     display: none;
 }
 header.light .header__logo img[data-background="light"] {
     display: block;
+}
+header.always-light .header__logo img[data-background="light"] {
+    display: block !important;
 }
 header.light .header__logo img[data-background="transparent"] {
     display: none;
@@ -827,5 +839,38 @@ nav .header__main-menu {
 .hero-summary__image-credit{
     font-size: 1.1rem;
 }
+
+
+
+
+
+
+/* secondary hero */
+.hero__secondary{
+    background-color: white;
+    position: relative;
+    border-bottom: 1px solid var(--soft-gray);
+    overflow: hidden;
+}
+.hero__secondary .logo-accent{
+    width: 250px;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(40%);
+    right: 0
+}
+.hero__secondary__content{
+    padding-block: calc(var(--margin-block) * 0.5);
+}
+.hero__secondary__content .hero__secondary__content__page-title{
+    font-weight: 900;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+.hero__secondary__content .hero__secondary__content__page-description{
+ max-width: 50%;
+}
+
+
 
 
