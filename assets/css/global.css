@@ -319,6 +319,12 @@ cards
     display: none;
 }
 
+/* book card */
+.book-card .img-6_9{
+    padding-top: 100%;
+}
+
+
 .row .card {
     height: 100%;
 }
@@ -328,7 +334,7 @@ cards
 }
 .sticky-card{
     position: sticky;
-    top: 20rem;
+    top: 16rem;
 }
 
 .event-metadata-wrapper{
