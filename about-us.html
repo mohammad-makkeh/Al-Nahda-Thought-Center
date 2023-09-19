@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Topics</title>
+        <link
+            rel="shortcut icon"
+            href="/assets/img/favico.png"
+            type="image/x-icon"
+        />
+
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="/assets/css/global.css" />
+        <link rel="stylesheet" href="/assets/css/breakpoints.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    </head>
+    <body>
+        <header class="header always-light">
+            <div class="header__head container">
+                <div class="header__logo_search_field">
+                    <a href="/" class="img header__logo">
+                        <img
+                            src="/assets/img/alNahdaLogo.svg"
+                            alt="AlNahda Logo"
+                            srcset=""
+                            width="225px"
+                            data-background="transparent"
+                        />
+                        <img
+                            src="/assets/img/alNahdaLogo_dark.svg"
+                            alt="AlNahda Logo"
+                            srcset=""
+                            width="225px"
+                            data-background="light"
+                        />
+                    </a>
+                    <div class="header__right-group">
+                        <div class="header__search_option">
+                            <span class="hide-on-tablet">Search</span>
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <div class="header__hamburger-menu">
+                            <i class="open-icon fa fa-bars"></i>
+                            <i class="close-icon fa fa-xmark"></i>
+                        </div>
+                    </div>
+                </div>
+                <nav class="header__nav_bar">
+                    <div class="header__main-menu">
+                        <div class="header__nav_option" data-nav="topics">
+                            <span>Topics</span>
+                            <i class="fa fa-chevron-down"></i>
+                        </div>
+                        <div class="header__nav_option" data-nav="publications">
+                            <span>Publications & Resources</span>
+                            <i class="fa fa-chevron-down"></i>
+                        </div>
+                        <div class="header__nav_option">
+                            <span>Events</span>
+                        </div>
+                        <div class="header__nav_option">
+                            <span>Networks</span>
+                            <i class="fa fa-chevron-down"></i>
+                        </div>
+                        <div class="header__nav_option">
+                            <span>About Us</span>
+                            <i class="fa fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="header__submenu">
+                        <div class="container header__placeholders-wrapper">
+                            <div class="header__submenu__placeholder"></div>
+                            <div class="header__submenu__separator"></div>
+                            <div class="header__subsubmenu__placeholder"></div>
+                        </div>
+                        <template data-nav="topics">
+                            <div class="header__submenu__content">
+                                <h3 class="card-title">Topic Themes</h3>
+                                <ul class="submenu-list">
+                                    <li
+                                        class="submenu-item"
+                                        data-submenu="arab_transformations_and_al_nahda"
+                                    >
+                                        <a href="/topics.html">
+                                            Arab Transformations and Al Nahda
+                                        </a>
+                                    </li>
+                                    <li
+                                        class="submenu-item"
+                                        data-submenu="access_to_justice"
+                                    >
+                                        <a href="#"> Access to Justice </a>
+                                    </li>
+                                    <li class="submenu-item">
+                                        <a href="#">
+                                            Social Protection and Economic
+                                            Development
+                                        </a>
+                                    </li>
+                                    <li class="submenu-item">
+                                        <a href="#">
+                                            The Question of Palestine
+                                        </a>
+                                    </li>
+                                    <li class="submenu-item">
+                                        <a href="#">
+                                            Migration, Forced Displacement, and
+                                            statelessness in the Arab World
+                                        </a>
+                                    </li>
+                                    <li class="submenu-item">
+                                        <a href="#">
+                                            Gender Justice and Youth Empowerment
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <template
+                                data-submenu="arab_transformations_and_al_nahda"
+                            >
+                                <div class="header__subsubmenu__content">
+                                    <h3
+                                        class="card-title"
+                                        id="subsubmenu-title"
+                                    ></h3>
+                                    <ul class="submenu-list">
+                                        <li class="submenu-item">
+                                            <a href="#">
+                                                Revival of Al Nahda Talks
+                                            </a>
+                                        </li>
+                                        <li class="submenu-item">
+                                            <a href="#">
+                                                Peace and Conflict in the Arab
+                                                World
+                                            </a>
+                                        </li>
+                                        <li class="submenu-item">
+                                            <a href="#">
+                                                Civic Space and Society
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </template>
+
+                            <template data-submenu="access_to_justice">
+                                <div class="header__subsubmenu__content">
+                                    <h3
+                                        class="card-title"
+                                        id="subsubmenu-title"
+                                    ></h3>
+                                    <ul class="submenu-list">
+                                        <li class="submenu-item">
+                                            <a href="#"> Legal Aid </a>
+                                        </li>
+                                        <li class="submenu-item">
+                                            <a href="#">
+                                                Women’s Access to Justice
+                                            </a>
+                                        </li>
+                                        <li class="submenu-item">
+                                            <a href="#">
+                                                Children´s Access to Justice
+                                            </a>
+                                        </li>
+                                        <li class="submenu-item">
+                                            <a href="#">
+                                                Combating Narcotics and Drugs
+                                            </a>
+                                        </li>
+                                        <li class="submenu-item">
+                                            <a href="#">
+                                                Right to Health and
+                                                Accountability
+                                            </a>
+                                        </li>
+                                        <li class="submenu-item">
+                                            <a href="#">
+                                                Justice Sector Reform
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </template>
+                        </template>
+
+                        <template data-nav="publications">
+                            <div class="header__submenu__content">
+                                <h3 class="card-title">
+                                    Publications and Resources
+                                </h3>
+                                <ul class="submenu-list">
+                                    <li class="submenu-item">
+                                        Reports & Studies
+                                    </li>
+                                    <li class="submenu-item">Policy Briefs</li>
+                                    <li class="submenu-item">Books</li>
+                                </ul>
+                            </div>
+                        </template>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section>
+                <div class="container block-section pad-header-height">
+                    <div class="row">
+                        <div class="col-6">
+                            <h2 class="display-3 fw-bold mb-4">About Us</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua.
+                                Convallis aenean et tortor at. Enim sed faucibus
+                                turpis in eu mi. Erat imperdiet sed euismod nisi
+                                porta. Aenean sed adipiscing diam donec. Vel
+                                eros donec ac odio tempor. Ultrices dui sapien
+                                eget mi proin. Volutpat ac tincidunt vitae
+                                semper quis lectus. Sit amet consectetur
+                                adipiscing elit duis tristique. Ut diam quam
+                                nulla porttitor massa. Ipsum faucibus.
+                            </p>
+                        </div>
+                        <div class="col-6 img img-contain">
+                            <img
+                                src="/assets/img/alNahdaLogo_dark.svg"
+                                alt=""
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="container block-section">
+                    <div class="row">
+                        <div class="col-6 img img-contain">
+                            <img src="/assets/img/person.png" alt="" />
+                        </div>
+                        <div class="col-6">
+                            <h2 class="display-3 fw-bold mb-4">
+                                A Letter From Our Chaiman
+                            </h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua.
+                                Convallis aenean et tortor at. Enim sed faucibus
+                                turpis in eu mi. Erat imperdiet sed euismod nisi
+                                porta. Aenean sed adipiscing diam donec. Vel
+                                eros donec ac odio tempor. Ultrices dui sapien
+                                eget mi proin. Volutpat ac tincidunt vitae
+                                semper quis lectus. Sit amet consectetur
+                                adipiscing elit duis tristique. Ut diam quam
+                                nulla porttitor massa. Ipsum faucibus.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="container block-section">
+                    <div class="row">
+                        <h2 class="display-3 fw-bolder">Presidents</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 mb-3">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua.
+                                Convallis aenean et.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-4">
+                            <div class="person-card">
+                                <div class="person-card__img img">
+                                    <img
+                                        src="/assets/img/person.png"
+                                        alt="person"
+                                    />
+                                </div>
+                                <div class="person-card__info">
+                                    <div class="person-card__name">
+                                        Person Name
+                                    </div>
+                                    <div class="meta">EXECUTIVE</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="person-card">
+                                <div class="person-card__img img">
+                                    <img
+                                        src="/assets/img/person.png"
+                                        alt="person"
+                                    />
+                                </div>
+                                <div class="person-card__info">
+                                    <div class="person-card__name">
+                                        Person Name
+                                    </div>
+                                    <div class="meta">EXECUTIVE</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="person-card">
+                                <div class="person-card__img img">
+                                    <img
+                                        src="/assets/img/person.png"
+                                        alt="person"
+                                    />
+                                </div>
+                                <div class="person-card__info">
+                                    <div class="person-card__name">
+                                        Person Name
+                                    </div>
+                                    <div class="meta">EXECUTIVE</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="container block-section">
+                    <div class="row">
+                        <h2 class="display-3 fw-bolder">Executive Board</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 mb-3">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua.
+                                Convallis aenean et.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-4">
+                            <div class="person-card">
+                                <div class="person-card__img img">
+                                    <img
+                                        src="/assets/img/person.png"
+                                        alt="person"
+                                    />
+                                </div>
+                                <div class="person-card__info">
+                                    <div class="person-card__name">
+                                        Person Name
+                                    </div>
+                                    <div class="meta">EXECUTIVE</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="person-card">
+                                <div class="person-card__img img">
+                                    <img
+                                        src="/assets/img/person.png"
+                                        alt="person"
+                                    />
+                                </div>
+                                <div class="person-card__info">
+                                    <div class="person-card__name">
+                                        Person Name
+                                    </div>
+                                    <div class="meta">EXECUTIVE</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="person-card">
+                                <div class="person-card__img img">
+                                    <img
+                                        src="/assets/img/person.png"
+                                        alt="person"
+                                    />
+                                </div>
+                                <div class="person-card__info">
+                                    <div class="person-card__name">
+                                        Person Name
+                                    </div>
+                                    <div class="meta">EXECUTIVE</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-4">
+                            <div class="person-card">
+                                <div class="person-card__img img">
+                                    <img
+                                        src="/assets/img/person.png"
+                                        alt="person"
+                                    />
+                                </div>
+                                <div class="person-card__info">
+                                    <div class="person-card__name">
+                                        Person Name
+                                    </div>
+                                    <div class="meta">EXECUTIVE</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="person-card">
+                                <div class="person-card__img img">
+                                    <img
+                                        src="/assets/img/person.png"
+                                        alt="person"
+                                    />
+                                </div>
+                                <div class="person-card__info">
+                                    <div class="person-card__name">
+                                        Person Name
+                                    </div>
+                                    <div class="meta">EXECUTIVE</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="person-card">
+                                <div class="person-card__img img">
+                                    <img
+                                        src="/assets/img/person.png"
+                                        alt="person"
+                                    />
+                                </div>
+                                <div class="person-card__info">
+                                    <div class="person-card__name">
+                                        Person Name
+                                    </div>
+                                    <div class="meta">EXECUTIVE</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-4">
+                            <div class="person-card">
+                                <div class="person-card__img img">
+                                    <img
+                                        src="/assets/img/person.png"
+                                        alt="person"
+                                    />
+                                </div>
+                                <div class="person-card__info">
+                                    <div class="person-card__name">
+                                        Person Name
+                                    </div>
+                                    <div class="meta">EXECUTIVE</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="person-card">
+                                <div class="person-card__img img">
+                                    <img
+                                        src="/assets/img/person.png"
+                                        alt="person"
+                                    />
+                                </div>
+                                <div class="person-card__info">
+                                    <div class="person-card__name">
+                                        Person Name
+                                    </div>
+                                    <div class="meta">EXECUTIVE</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="person-card">
+                                <div class="person-card__img img">
+                                    <img
+                                        src="/assets/img/person.png"
+                                        alt="person"
+                                    />
+                                </div>
+                                <div class="person-card__info">
+                                    <div class="person-card__name">
+                                        Person Name
+                                    </div>
+                                    <div class="meta">EXECUTIVE</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="container block-section">
+                    <div class="row">
+                        <h2 class="display-3 fw-bolder">Senior Advisors</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 mb-3">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua.
+                                Convallis aenean et.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-4">
+                            <div class="person-card">
+                                <div class="person-card__img img">
+                                    <img
+                                        src="/assets/img/person.png"
+                                        alt="person"
+                                    />
+                                </div>
+                                <div class="person-card__info">
+                                    <div class="person-card__name">
+                                        Person Name
+                                    </div>
+                                    <div class="meta">EXECUTIVE</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="person-card">
+                                <div class="person-card__img img">
+                                    <img
+                                        src="/assets/img/person.png"
+                                        alt="person"
+                                    />
+                                </div>
+                                <div class="person-card__info">
+                                    <div class="person-card__name">
+                                        Person Name
+                                    </div>
+                                    <div class="meta">EXECUTIVE</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="person-card">
+                                <div class="person-card__img img">
+                                    <img
+                                        src="/assets/img/person.png"
+                                        alt="person"
+                                    />
+                                </div>
+                                <div class="person-card__info">
+                                    <div class="person-card__name">
+                                        Person Name
+                                    </div>
+                                    <div class="meta">EXECUTIVE</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-4">
+                            <div class="person-card">
+                                <div class="person-card__img img">
+                                    <img
+                                        src="/assets/img/person.png"
+                                        alt="person"
+                                    />
+                                </div>
+                                <div class="person-card__info">
+                                    <div class="person-card__name">
+                                        Person Name
+                                    </div>
+                                    <div class="meta">EXECUTIVE</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="person-card">
+                                <div class="person-card__img img">
+                                    <img
+                                        src="/assets/img/person.png"
+                                        alt="person"
+                                    />
+                                </div>
+                                <div class="person-card__info">
+                                    <div class="person-card__name">
+                                        Person Name
+                                    </div>
+                                    <div class="meta">EXECUTIVE</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="person-card">
+                                <div class="person-card__img img">
+                                    <img
+                                        src="/assets/img/person.png"
+                                        alt="person"
+                                    />
+                                </div>
+                                <div class="person-card__info">
+                                    <div class="person-card__name">
+                                        Person Name
+                                    </div>
+                                    <div class="meta">EXECUTIVE</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-4">
+                            <div class="person-card">
+                                <div class="person-card__img img">
+                                    <img
+                                        src="/assets/img/person.png"
+                                        alt="person"
+                                    />
+                                </div>
+                                <div class="person-card__info">
+                                    <div class="person-card__name">
+                                        Person Name
+                                    </div>
+                                    <div class="meta">EXECUTIVE</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="person-card">
+                                <div class="person-card__img img">
+                                    <img
+                                        src="/assets/img/person.png"
+                                        alt="person"
+                                    />
+                                </div>
+                                <div class="person-card__info">
+                                    <div class="person-card__name">
+                                        Person Name
+                                    </div>
+                                    <div class="meta">EXECUTIVE</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="person-card">
+                                <div class="person-card__img img">
+                                    <img
+                                        src="/assets/img/person.png"
+                                        alt="person"
+                                    />
+                                </div>
+                                <div class="person-card__info">
+                                    <div class="person-card__name">
+                                        Person Name
+                                    </div>
+                                    <div class="meta">EXECUTIVE</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="container block-section">
+                    <div class="row">
+                        <h2 class="display-3 fw-bolder">The Center Team (Researchers' Team)</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 mb-3">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua.
+                                Convallis aenean et.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-4">
+                            <div class="person-card">
+                                <div class="person-card__img img">
+                                    <img
+                                        src="/assets/img/person.png"
+                                        alt="person"
+                                    />
+                                </div>
+                                <div class="person-card__info">
+                                    <div class="person-card__name">
+                                        Person Name
+                                    </div>
+                                    <div class="meta">EXECUTIVE</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="person-card">
+                                <div class="person-card__img img">
+                                    <img
+                                        src="/assets/img/person.png"
+                                        alt="person"
+                                    />
+                                </div>
+                                <div class="person-card__info">
+                                    <div class="person-card__name">
+                                        Person Name
+                                    </div>
+                                    <div class="meta">EXECUTIVE</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="person-card">
+                                <div class="person-card__img img">
+                                    <img
+                                        src="/assets/img/person.png"
+                                        alt="person"
+                                    />
+                                </div>
+                                <div class="person-card__info">
+                                    <div class="person-card__name">
+                                        Person Name
+                                    </div>
+                                    <div class="meta">EXECUTIVE</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-4">
+                            <div class="person-card">
+                                <div class="person-card__img img">
+                                    <img
+                                        src="/assets/img/person.png"
+                                        alt="person"
+                                    />
+                                </div>
+                                <div class="person-card__info">
+                                    <div class="person-card__name">
+                                        Person Name
+                                    </div>
+                                    <div class="meta">EXECUTIVE</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="person-card">
+                                <div class="person-card__img img">
+                                    <img
+                                        src="/assets/img/person.png"
+                                        alt="person"
+                                    />
+                                </div>
+                                <div class="person-card__info">
+                                    <div class="person-card__name">
+                                        Person Name
+                                    </div>
+                                    <div class="meta">EXECUTIVE</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="person-card">
+                                <div class="person-card__img img">
+                                    <img
+                                        src="/assets/img/person.png"
+                                        alt="person"
+                                    />
+                                </div>
+                                <div class="person-card__info">
+                                    <div class="person-card__name">
+                                        Person Name
+                                    </div>
+                                    <div class="meta">EXECUTIVE</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-4">
+                            <div class="person-card">
+                                <div class="person-card__img img">
+                                    <img
+                                        src="/assets/img/person.png"
+                                        alt="person"
+                                    />
+                                </div>
+                                <div class="person-card__info">
+                                    <div class="person-card__name">
+                                        Person Name
+                                    </div>
+                                    <div class="meta">EXECUTIVE</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="person-card">
+                                <div class="person-card__img img">
+                                    <img
+                                        src="/assets/img/person.png"
+                                        alt="person"
+                                    />
+                                </div>
+                                <div class="person-card__info">
+                                    <div class="person-card__name">
+                                        Person Name
+                                    </div>
+                                    <div class="meta">EXECUTIVE</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="person-card">
+                                <div class="person-card__img img">
+                                    <img
+                                        src="/assets/img/person.png"
+                                        alt="person"
+                                    />
+                                </div>
+                                <div class="person-card__info">
+                                    <div class="person-card__name">
+                                        Person Name
+                                    </div>
+                                    <div class="meta">EXECUTIVE</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <div class="container block-section">
+                    <div class="row">
+                        <h2 class="display-3 fw-bolder">Donors & partners</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 mb-3">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua.
+                                Convallis aenean et.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="row mb-4">
+                        <div class="col-4">
+                            <div class="person-card">
+                                <div class="person-card__img img">
+                                    <img
+                                        src="/assets/img/person.png"
+                                        alt="person"
+                                    />
+                                </div>
+                                <div class="person-card__info">
+                                    <div class="person-card__name">
+                                        Person Name
+                                    </div>
+                                    <div class="meta">EXECUTIVE</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="person-card">
+                                <div class="person-card__img img">
+                                    <img
+                                        src="/assets/img/person.png"
+                                        alt="person"
+                                    />
+                                </div>
+                                <div class="person-card__info">
+                                    <div class="person-card__name">
+                                        Person Name
+                                    </div>
+                                    <div class="meta">EXECUTIVE</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="person-card">
+                                <div class="person-card__img img">
+                                    <img
+                                        src="/assets/img/person.png"
+                                        alt="person"
+                                    />
+                                </div>
+                                <div class="person-card__info">
+                                    <div class="person-card__name">
+                                        Person Name
+                                    </div>
+                                    <div class="meta">EXECUTIVE</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-4">
+                            <div class="person-card">
+                                <div class="person-card__img img">
+                                    <img
+                                        src="/assets/img/person.png"
+                                        alt="person"
+                                    />
+                                </div>
+                                <div class="person-card__info">
+                                    <div class="person-card__name">
+                                        Person Name
+                                    </div>
+                                    <div class="meta">EXECUTIVE</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="person-card">
+                                <div class="person-card__img img">
+                                    <img
+                                        src="/assets/img/person.png"
+                                        alt="person"
+                                    />
+                                </div>
+                                <div class="person-card__info">
+                                    <div class="person-card__name">
+                                        Person Name
+                                    </div>
+                                    <div class="meta">EXECUTIVE</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="person-card">
+                                <div class="person-card__img img">
+                                    <img
+                                        src="/assets/img/person.png"
+                                        alt="person"
+                                    />
+                                </div>
+                                <div class="person-card__info">
+                                    <div class="person-card__name">
+                                        Person Name
+                                    </div>
+                                    <div class="meta">EXECUTIVE</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4 email-collector social-reach">
+                            <h3 class="card-title mb-3">
+                                Subscribe to our email newsletter
+                            </h3>
+                            <p class="card-subtitle text-secondary mb-5">
+                                Our flagship newsletter provides a weekly
+                                round-up of content, plus receive the latest on
+                                events and how to connect with the institute.
+                            </p>
+                            <div class="email-input">
+                                <input
+                                    type="email"
+                                    name="email"
+                                    id="email"
+                                    placeholder="Enter your email"
+                                />
+                                <button type="button">Subscribe →</button>
+                            </div>
+                        </div>
+                        <div class="col-4 offset-4 social-follow">
+                            <h3 class="card-title">
+                                Follow us on social media
+                            </h3>
+                            <div class="social-list">
+                                <a href="#" class="social-icon">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="social-icon">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="#" class="social-icon">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </a>
+                                <a href="#" class="social-icon">
+                                    <i class="fa-brands fa-youtube"></i>
+                                </a>
+                                <a href="#" class="social-icon">
+                                    <i class="fa-brands fa-x-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-section">
+                <div class="container popular-links">
+                    <h3 class="card-title mb-5">Popular Links</h3>
+
+                    <ul class="p-0">
+                        <li class="mb-4">
+                            <a class="lh-sm pb-1 underline-effect" href="#"
+                                >Nav item</a
+                            >
+                        </li>
+                        <li class="mb-4">
+                            <a class="lh-sm pb-1 underline-effect" href="#"
+                                >Nav item</a
+                            >
+                        </li>
+                        <li class="mb-4">
+                            <a class="lh-sm pb-1 underline-effect" href="#"
+                                >Nav item</a
+                            >
+                        </li>
+                        <li class="mb-4">
+                            <a class="lh-sm pb-1 underline-effect" href="#"
+                                >Nav item</a
+                            >
+                        </li>
+                        <li class="mb-4">
+                            <a class="lh-sm pb-1 underline-effect" href="#"
+                                >Nav item</a
+                            >
+                        </li>
+                        <li class="mb-4">
+                            <a class="lh-sm pb-1 underline-effect" href="#"
+                                >Nav item</a
+                            >
+                        </li>
+                        <li class="mb-4">
+                            <a class="lh-sm pb-1 underline-effect" href="#"
+                                >Nav item</a
+                            >
+                        </li>
+                        <li class="mb-4">
+                            <a class="lh-sm pb-1 underline-effect" href="#"
+                                >Nav item</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright footer-section">
+                <div class="container">© Al Nahda Thought Center - 2023</div>
+            </div>
+        </footer>
+
+        <!-- header -->
+        <script>
+            let activeMenuItem,
+                activeSubmenuItem,
+                headerBackgroundChangethreshold = 150,
+                menuOpened = false;
+
+            const header = document.querySelector("header.header");
+            const navbar = header.querySelector(".header__nav_bar");
+            const mainMenuItems = [
+                ...header.querySelectorAll(
+                    ".header__main-menu .header__nav_option"
+                ),
+            ];
+            const subMenu = header.querySelector(".header__submenu");
+            const subMenuPlaceholder = subMenu.querySelector(
+                ".header__submenu__placeholder"
+            );
+            const subSubMenuPlaceholder = subMenu.querySelector(
+                ".header__subsubmenu__placeholder"
+            );
+            const submenuSeparator = document.querySelector(
+                ".header__submenu__separator"
+            );
+            const openMenuBtn = header.querySelector(
+                ".header__hamburger-menu .open-icon"
+            );
+            const closeMenuBtn = header.querySelector(
+                ".header__hamburger-menu .close-icon"
+            );
+
+            const recalculateSubMenuHeight = (cuurentSubMenu) => {
+                if (!cuurentSubMenu) return;
+                if (!cuurentSubMenu.innerHTML) {
+                    subMenu.animate(
+                        {
+                            height: "0px",
+                        },
+                        { duration: 300, fill: "forwards" }
+                    );
+                    return;
+                }
+                const clientBounding = cuurentSubMenu.getBoundingClientRect();
+                const { height } = clientBounding;
+                subMenu.animate(
+                    {
+                        height: height + "px",
+                    },
+                    { duration: 300, fill: "forwards" }
+                );
+            };
+
+            const closeSubmenu = () => {
+                subMenuPlaceholder.innerHTML = "";
+                if (window.scrollY <= headerBackgroundChangethreshold)
+                    header.classList.remove("light");
+                activeMenuItem = "";
+                recalculateSubMenuHeight(subMenuPlaceholder);
+            };
+
+            const addListenersToSubmenus = (submenu) => {
+                const submenuItems = [
+                    ...submenu.querySelectorAll(".submenu-item"),
+                ];
+                submenuItems.forEach((subMenuItem) => {
+                    if (!subSubMenuPlaceholder) return;
+
+                    const getTemplate = (subMenuItem) => {
+                        const submenuName = subMenuItem.dataset.submenu;
+                        if (!submenuName) return;
+                        if (activeSubmenuItem === submenuName) return;
+                        activeSubmenuItem = submenuName;
+                        submenuSeparator.style.opacity = 1;
+                        let template = document.querySelector(
+                            `template[data-submenu=${submenuName}]`
+                        );
+                        if (!template) return;
+                        template = template.content.cloneNode(true);
+                        return template;
+                    };
+
+                    if (window.innerWidth > 900) {
+                        if (subMenuItem.onmouseenter) return;
+                        subMenuItem.onmouseenter = () => {
+                            const template = getTemplate(subMenuItem);
+                            if (!template) return;
+                            subSubMenuPlaceholder.innerHTML = "";
+                            subSubMenuPlaceholder.appendChild(template);
+                            subSubMenuPlaceholder.querySelector(
+                                "#subsubmenu-title"
+                            ).innerText = document.querySelector(
+                                `li[data-submenu=${subMenuItem.dataset.submenu}]`
+                            ).innerText;
+                        };
+                    } else {
+                        subMenuItem.onclick = () => {
+                            const template = getTemplate(subMenuItem);
+                            subSubMenuPlaceholder.innerHTML = "";
+                            subSubMenuPlaceholder.appendChild(template);
+                        };
+                    }
+                });
+            };
+
+            const addClickListenersToMenuItems = () => {
+                mainMenuItems.forEach((menuItem) => {
+                    if (!subMenuPlaceholder) return;
+                    if (window.innerWidth > 900)
+                        menuItem.onclick = () => {
+                            const navItemName = menuItem.dataset.nav;
+                            if (!navItemName) return;
+                            if (activeMenuItem === navItemName)
+                                return closeSubmenu();
+                            activeMenuItem = navItemName;
+                            activeSubmenuItem = "";
+                            submenuSeparator.style.opacity = 0;
+                            subSubMenuPlaceholder.innerHTML = "";
+                            let template = document.querySelector(
+                                `template[data-nav=${navItemName}]`
+                            );
+                            if (!template) return;
+                            template = template.content.cloneNode(true);
+                            subMenuPlaceholder.innerHTML = "";
+                            subMenuPlaceholder.appendChild(template);
+                            addListenersToSubmenus(subMenuPlaceholder);
+                            header.classList.add("light");
+                            recalculateSubMenuHeight(subMenuPlaceholder);
+                        };
+                    else menuItem.onclick = () => {};
+                });
+            };
+            addClickListenersToMenuItems();
+
+            openMenuBtn.onclick = () => {
+                navbar.classList.add("menu-opened");
+                openMenuBtn.style.display = "none";
+                closeMenuBtn.style.display = "block";
+                menuOpened = true;
+                header.classList.add("light");
+            };
+            closeMenuBtn.onclick = () => {
+                navbar.classList.remove("menu-opened");
+                openMenuBtn.style.display = "block";
+                closeMenuBtn.style.display = "none";
+                menuOpened = false;
+                if (window.scrollY <= headerBackgroundChangethreshold)
+                    header.classList.remove("light");
+            };
+
+            window.addEventListener("scroll", (e) => {
+                if (window.scrollY > headerBackgroundChangethreshold)
+                    header.classList.add("light");
+                else if (!activeMenuItem && !menuOpened)
+                    header.classList.remove("light");
+            });
+
+            window.addEventListener("resize", (e) => {
+                addClickListenersToMenuItems();
+            });
+        </script>
+    </body>
+</html>
