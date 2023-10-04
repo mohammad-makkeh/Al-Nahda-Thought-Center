@@ -20,6 +20,12 @@
     --card-border-radius: 6px;
     --header-height: 150px;
 
+    --hero-mask-gradient: linear-gradient(
+        180deg,
+        #1e1e1e 0%,
+        rgba(30, 30, 30, 0) 54.17%,
+        #1e1e1e 100%
+    );;
     --underline-gradient: linear-gradient(90deg, #e60000, #4d0101);
     --accent-gradient: linear-gradient(135deg, #8c1311, #e4322f);
 
@@ -191,7 +197,7 @@ hero
     content: "";
     position: absolute;
     inset: 0;
-    background: var(--accent-gradient);
+    background: var(--hero-mask-gradient);
 }
 .scroll-down-indicator {
     width: 3.5rem;
