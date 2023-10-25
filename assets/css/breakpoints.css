@@ -11,12 +11,12 @@
     .email-collector .email-input {
         flex-direction: column;
         border-radius: 0px;
-        gap: .5rem;
+        gap: 0.5rem;
         overflow: hidden;
     }
     .email-collector .email-input input[type="email"] {
         background-color: var(--off-white-color);
-        border-radius: var(--card-border-radius);
+        border-radius: 3px;
         padding: 0.7rem 1.2rem;
         font-size: 1.6rem;
         flex-grow: 1;
@@ -26,19 +26,17 @@
         opacity: 0.8;
     }
     .email-collector .email-input button {
-        border-radius: var(--card-border-radius);
+        border-radius: 3px;
         padding: 0.7rem 1.5rem;
         font-size: 1.5rem;
         background-color: var(--accent-color);
         color: white;
     }
 
-
-
     /* footer */
     footer .footer-section {
-      padding-block: calc(var(--margin-block) * 0.75);
-  }
+        padding-block: calc(var(--margin-block) * 0.75);
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -121,6 +119,7 @@
     .mobile-horizontal-card .card__media {
         width: 35%;
         min-width: 35%;
+        border-radius: 0px;
     }
     .mobile-horizontal-card .img-6_9 {
         padding-top: 0;
@@ -177,10 +176,10 @@
     }
     .stats-container .stats-header {
         font-size: 3rem;
+        font-weight: 700;
         text-align: center;
     }
 
-    /* events card metadata */
     .event-metadata-wrapper {
         width: fit-content;
         position: static;
@@ -192,7 +191,7 @@
         place-items: center;
         height: 100%;
         width: 5rem;
-        border-radius: var(--card-border-radius);
+        border-radius: 3px;
         background-color: var(--accent-color);
         color: var(--off-white-color);
     }
@@ -202,6 +201,7 @@
         align-items: center;
         padding: 3px 6px;
         flex-direction: row;
+        gap: 5px;
         color: var(--off-white-color);
     }
     .event-metadata__datetime span:nth-of-type(1) {
@@ -209,18 +209,13 @@
         font-weight: 600;
         white-space: auto;
     }
-    .event-metadata__datetime span:nth-of-type(2) {
-        font-size: 0.8rem;
-        font-weight: 800;
-        opacity: 0.6;
-    }
     .event-metadata__location {
         width: fit-content;
         letter-spacing: 2px;
         position: static;
         transform: none;
         padding: 3px 6px 0px 6px;
-        border-radius: 4px 4px 0 0;
+        border-radius: 3px;
         font-weight: 700;
         font-size: 1rem;
     }
@@ -260,5 +255,10 @@
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
         gap: 0.5rem;
+    }
+
+    /* supprt us banner */
+    .support-us-banner .support-us-banner__media-container {
+        height: 25vw;
     }
 }
