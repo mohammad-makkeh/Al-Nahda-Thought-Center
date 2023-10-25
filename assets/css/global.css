@@ -627,9 +627,6 @@ footer .footer-section {
     background-color: var(--accent-color);
     color: white;
 }
-.social-follow {
-    max-width: 40%;
-}
 .social-follow h3 {
     margin-bottom: 2rem;
 }
