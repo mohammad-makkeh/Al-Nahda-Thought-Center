@@ -2172,12 +2172,10 @@
             const setMenuOpened = (bool) => {
                 menuOpened = bool;
 
-
-                if(menuOpened){
-                    document.body.style.overflow = 'hidden';
-                }
-                else{
-                    document.body.style.overflow = 'auto';
+                if (menuOpened) {
+                    document.body.style.overflow = "hidden";
+                } else {
+                    document.body.style.overflow = "auto";
                 }
             };
 
@@ -2348,8 +2346,8 @@
                     currentValue === interpolateTo
                 )
                     return;
-                numberInDOM.innerHTML = (
-                    Math.ceil(parseInt(numberInDOM.innerHTML) + incrementValue)
+                numberInDOM.innerHTML = Math.ceil(
+                    parseInt(numberInDOM.innerHTML) + incrementValue
                 ).toFixed(0);
                 if (currentValue >= interpolateTo) {
                     numberInDOM.innerHTML = interpolateTo;
@@ -2363,27 +2361,34 @@
             const numbersToInterpolate = [
                 ...(document.querySelectorAll(".interpolate-up") || []),
             ];
-
             const statsField = document.querySelector(".stats-field");
-            const statsFieldBoundingRect = statsField?.getBoundingClientRect();
+            const statsCards = [...document.querySelectorAll(".stats-card")];
 
             window.addEventListener("scroll", (e) => {
+                const statsFieldBoundingRect =
+                    statsField?.getBoundingClientRect();
                 if (
-                    !(statsFieldBoundingRect.top >= 0 &&
-                    statsFieldBoundingRect.left >= 0 &&
-                    statsFieldBoundingRect.bottom <=
-                        (window.innerHeight ||
-                            document.documentElement.clientHeight) &&
-                    statsFieldBoundingRect.right <=
-                        (window.innerWidth ||
-                            document.documentElement.clientWidth))
+                    statsFieldBoundingRect.top >= 0 &&
+                    statsFieldBoundingRect.top <= window.innerHeight
                 ) {
-                    numbersToInterpolate.forEach((number) => {
+                    statsCards?.forEach((card) => {
+                        if (card.classList.contains("animate-in")) return;
+                        const cardBR = card.getBoundingClientRect();
+                        if (
+                            !(
+                                cardBR.top >= 0 &&
+                                cardBR.top <= window.innerHeight
+                            )
+                        )
+                            return;
+                        card.classList.add("animate-in");
+                        const number = card.querySelector(".interpolate-up");
                         if (number.dataset.interpolated) return;
                         const interpolateTo = number.dataset.interpolateTo;
                         if (Number.isNaN(interpolateTo)) return;
                         const duration = 200;
                         incrementValue = interpolateTo / duration;
+
                         interpolateUp(number, interpolateTo, incrementValue);
                         number.dataset.interpolated = true;
                     });

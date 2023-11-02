@@ -545,8 +545,26 @@ stats section
     backdrop-filter: blur(50px);
     padding: 10px 20px;
     display: flex;
+    transform: translateX(calc(var(--direction) * 100%));
+    opacity: 0;
+}
+
+.stats-card.animate-in{
+    animation: slide-in 0.5s forwards;
+}
+
+@keyframes slide-in {
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.stats-card:nth-child(odd) {
+    --direction: -1;
 }
 .stats-card:nth-child(even) {
+    --direction: 1;
     align-self: end;
     justify-content: end;
 }
