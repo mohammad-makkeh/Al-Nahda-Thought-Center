@@ -2,6 +2,7 @@
     :root {
         --inline-padding: 12rem;
         --margin-block: 4rem;
+        --header-height: 150px;
     }
 
     .hero__content .hero__title a {
@@ -43,6 +44,7 @@
     :root {
         --inline-padding: 6rem;
         --margin-block: 3rem;
+        --header-height: 90px;
     }
 
     .header__logo {
@@ -297,6 +299,7 @@
     :root {
         --inline-padding: 2rem;
         --margin-block: 4rem;
+        --header-height: 77px
     }
 
     .header__logo {

@@ -2584,10 +2584,13 @@
                 const statsFieldBoundingRect =
                     statsField?.getBoundingClientRect();
                 if (
-                    statsFieldBoundingRect.top >= 0 &&
-                    statsFieldBoundingRect.top <= window.innerHeight
-                ) {
-                    statsCards?.forEach((card) => {
+                    (statsFieldBoundingRect.top >= 0 &&
+                    statsFieldBoundingRect.top <= window.innerHeight) || (
+                        statsFieldBoundingRect.top < 0
+                        && Math.abs(statsFieldBoundingRect.top) < statsFieldBoundingRect.height)
+                    )
+                 {
+                    statsCards?.forEach((card, i) => {
                         if (card.classList.contains("animate-in")) return;
                         const cardBR = card.getBoundingClientRect();
                         if (
@@ -2596,7 +2599,7 @@
                                 cardBR.top <= window.innerHeight
                             )
                         )
-                            return;
+                            return i === 3 && console.log(cardBR.top, window.innerHeight);
                         card.classList.add("animate-in");
                         const number = card.querySelector(".interpolate-up");
                         if (number.dataset.interpolated) return;
