@@ -245,7 +245,10 @@
                                                     ></i>
                                                     back
                                                 </div>
-                                                <a href="/topics.html"> Arab Transformations And Al Nahda </a>
+                                                <a href="/topics.html">
+                                                    Arab Transformations And Al
+                                                    Nahda
+                                                </a>
                                                 <i
                                                     class="fa-solid fa-chevron-right"
                                                 ></i>
@@ -291,7 +294,9 @@
                                     <h3
                                         class="card-title"
                                         id="subsubmenu-title"
-                                    > Access To Justice </h3>
+                                    >
+                                        Access To Justice
+                                    </h3>
                                     <ul class="submenu-list">
                                         <li class="submenu-item">
                                             <a href="#"> Legal Aid </a>
@@ -2283,10 +2288,6 @@
             </div>
         </footer>
 
-        <script>
-            const isMobile = () => window.innerWidth < 768;
-        </script>
-
         <!-- carousels -->
         <script>
             const carousels = Array.from(
@@ -2306,6 +2307,10 @@
                 const prevEl = carousel.querySelector(".carousel-prev-btn");
                 if (prevEl) prevEl.onclick = () => swiper.slidePrev();
             });
+        </script>
+
+        <script>
+            const isMobile = () => window.innerWidth < 768;
         </script>
 
         <!-- header -->
@@ -2348,7 +2353,6 @@
             const searchInput = document.querySelector(
                 ".header .header__search-input"
             );
-            
 
             const setMenuOpened = (bool) => {
                 menuOpened = bool;
@@ -2461,10 +2465,11 @@
                 if (!template) return;
                 subSubMenuPlaceholder.innerHTML = "";
                 subSubMenuPlaceholder.appendChild(template);
-                document.querySelector(
-                    ".header .subsubmenu-back-btn"
-                ).onclick = () => {header.classList.remove('subsubmenu-opened');
-                activeMenuItem = null}
+                document.querySelector(".header .subsubmenu-back-btn").onclick =
+                    () => {
+                        header.classList.remove("subsubmenu-opened");
+                        activeMenuItem = null;
+                    };
             };
 
             const addListenersToSubmenus = (submenu) => {
@@ -2492,7 +2497,7 @@
                     menuItem.onclick = () => {
                         const navItemName = menuItem.dataset.nav;
                         if (!navItemName) return;
-                        if(!isMobile()){
+                        if (!isMobile()) {
                             if (activeMenuItem === navItemName)
                                 return closeSubmenu();
                         }
@@ -2517,7 +2522,10 @@
                         }
                         document.querySelector(
                             ".header .submenu-back-btn"
-                        ).onclick = () => {header.classList.remove('submenu-opened');activeMenuItem =null}
+                        ).onclick = () => {
+                            header.classList.remove("submenu-opened");
+                            activeMenuItem = null;
+                        };
                     };
                 });
             };
@@ -2541,8 +2549,6 @@
                 else if (!activeMenuItem && !menuOpened && !searchOpened)
                     header.classList.remove("light");
             });
-
-            
 
             window.addEventListener("resize", (e) => {
                 addClickListenersToMenuItems();
@@ -2585,11 +2591,11 @@
                     statsField?.getBoundingClientRect();
                 if (
                     (statsFieldBoundingRect.top >= 0 &&
-                    statsFieldBoundingRect.top <= window.innerHeight) || (
-                        statsFieldBoundingRect.top < 0
-                        && Math.abs(statsFieldBoundingRect.top) < statsFieldBoundingRect.height)
-                    )
-                 {
+                        statsFieldBoundingRect.top <= window.innerHeight) ||
+                    (statsFieldBoundingRect.top < 0 &&
+                        Math.abs(statsFieldBoundingRect.top) <
+                            statsFieldBoundingRect.height)
+                ) {
                     statsCards?.forEach((card, i) => {
                         if (card.classList.contains("animate-in")) return;
                         const cardBR = card.getBoundingClientRect();
@@ -2599,7 +2605,10 @@
                                 cardBR.top <= window.innerHeight
                             )
                         )
-                            return i === 3 && console.log(cardBR.top, window.innerHeight);
+                            return (
+                                i === 3 &&
+                                console.log(cardBR.top, window.innerHeight)
+                            );
                         card.classList.add("animate-in");
                         const number = card.querySelector(".interpolate-up");
                         if (number.dataset.interpolated) return;
