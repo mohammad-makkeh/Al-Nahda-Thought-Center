@@ -195,6 +195,18 @@
         font-size: 1.6rem;
     }
 
+    /* article details */
+    .article-hero__header__title {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+    .article-hero__header{
+        margin-bottom: 1rem;
+    }
+    .article-hero__metadata .meta{
+        font-size: 1rem;
+    }
+
     /* footer */
     footer .social-reach {
         flex-direction: column;
@@ -221,8 +233,6 @@
     p {
         font-size: 1.3rem;
     }
-
-
 
     /* stats section */
     .stats-card-content {
@@ -292,14 +302,13 @@
     .support-us-banner .support-us-banner__media-container {
         height: 20vw;
     }
-
 }
 
 @media screen and (max-width: 500px) {
     :root {
         --inline-padding: 2rem;
         --margin-block: 4rem;
-        --header-height: 77px
+        --header-height: 77px;
     }
 
     .header__logo {
