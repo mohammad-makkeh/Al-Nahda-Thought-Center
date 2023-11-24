@@ -327,6 +327,30 @@
                                                 Justice Sector Reform
                                             </a>
                                         </li>
+                                        <!-- extra for testing -->
+                                        <li class="submenu-item">
+                                            <a href="#">
+                                                Children´s Access to Justice
+                                            </a>
+                                        </li>
+                                        <li class="submenu-item">
+                                            <a href="#">
+                                                Combating Narcotics and Drugs
+                                            </a>
+                                        </li>
+                                        <li class="submenu-item">
+                                            <a href="#">
+                                                Right to Health and
+                                                Accountability
+                                            </a>
+                                        </li>
+                                        <li class="submenu-item">
+                                            <a href="#">
+                                                Justice Sector Reform
+                                            </a>
+                                        </li>
+                                        <!-- / extra for testing -->
+
                                     </ul>
                                 </div>
                             </template>
@@ -2313,6 +2337,7 @@
             const isMobile = () => window.innerWidth < 768;
         </script>
 
+        <!-- change 1 -->
         <!-- header -->
         <script>
             let activeMenuItem,
@@ -2372,6 +2397,29 @@
                 toggleSearchInHeader();
                 searchInput.focus();
             };
+
+            const resizeMenuHeightOnSubmenuOpen = (cuurentSubSubmenu) => {
+                if (!cuurentSubSubmenu?.innerHTML) {
+                    subMenu.animate(
+                        {
+                            height: "0px",
+                        },
+                        { duration: 300, fill: "forwards" }
+                    );
+                    return;
+                }
+                const clientBounding = cuurentSubSubmenu.getBoundingClientRect();
+                const { height } = clientBounding;
+                console.log(height)
+                const currentHeight = subMenu.getBoundingClientRect();
+                if(currentHeight >= height) return;
+                subMenu.animate(
+                    {
+                        height: height + "px",
+                    },
+                    { duration: 300, fill: "forwards" }
+                );
+            }
 
             const toggleMenuHeight = (cuurentSubMenu) => {
                 if (!cuurentSubMenu?.innerHTML) {
@@ -2465,6 +2513,7 @@
                 if (!template) return;
                 subSubMenuPlaceholder.innerHTML = "";
                 subSubMenuPlaceholder.appendChild(template);
+                resizeMenuHeightOnSubmenuOpen(subSubMenuPlaceholder);
                 document.querySelector(".header .subsubmenu-back-btn").onclick =
                     () => {
                         header.classList.remove("subsubmenu-opened");
