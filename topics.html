@@ -53,9 +53,9 @@
                         />
                     </a>
                     <div class="header__right-group">
-                        <div class="header__search_btn">
-                            <span class="hide-on-desktop">Search</span>
-                            <i class="fa fa-search"></i>
+                        <div class="header__search_btn header__searchBtn">
+                            <span class="hide-on-mobile">Search</span>
+                            <i class="fa fa-search hide-on-desktop"></i>
                         </div>
                         <div class="header__hamburger-menu">
                             <i class="open-icon fa fa-bars"></i>
@@ -65,24 +65,50 @@
                 </div>
                 <nav class="header__nav_bar">
                     <div class="header__main-menu">
-                        <div class="header__nav_option" data-nav="topics">
-                            <span>Topics</span>
-                            <i class="fa fa-chevron-down"></i>
+                        <div
+                            class="header__nav_option-container ms-md-0 me-md-0"
+                        >
+                            <div
+                                class="container header__nav_option"
+                                data-nav="topics"
+                            >
+                                <span>Topics</span>
+                                <i class="fa fa-chevron-down"></i>
+                            </div>
                         </div>
-                        <div class="header__nav_option" data-nav="publications">
-                            <span>Publications & Resources</span>
-                            <i class="fa fa-chevron-down"></i>
+                        <div
+                            class="header__nav_option-container ms-md-0 me-md-0"
+                        >
+                            <div
+                                class="container header__nav_option"
+                                data-nav="publications"
+                            >
+                                <span>Publications & Resources</span>
+                                <i class="fa fa-chevron-down"></i>
+                            </div>
                         </div>
-                        <div class="header__nav_option">
-                            <span>Events</span>
+                        <div
+                            class="header__nav_option-container ms-md-0 me-md-0"
+                        >
+                            <div class="container header__nav_option">
+                                <span>Events</span>
+                            </div>
                         </div>
-                        <div class="header__nav_option">
-                            <span>Networks</span>
-                            <i class="fa fa-chevron-down"></i>
+                        <div
+                            class="header__nav_option-container ms-md-0 me-md-0"
+                        >
+                            <div class="container header__nav_option">
+                                <span>Networks</span>
+                                <i class="fa fa-chevron-down"></i>
+                            </div>
                         </div>
-                        <div class="header__nav_option">
-                            <span>About Us</span>
-                            <i class="fa fa-chevron-down"></i>
+                        <div
+                            class="header__nav_option-container ms-md-0 me-md-0"
+                        >
+                            <div class="container header__nav_option">
+                                <span>About Us</span>
+                                <i class="fa fa-chevron-down"></i>
+                            </div>
                         </div>
                     </div>
                     <div class="header__submenu">
@@ -93,44 +119,102 @@
                         </div>
                         <template data-nav="topics">
                             <div class="header__submenu__content">
-                                <h3 class="card-title">Topic Themes</h3>
+                                <h3 class="card-title hide-on-mobile">
+                                    Topic Themes
+                                </h3>
+
                                 <ul class="submenu-list">
-                                    <li
-                                        class="submenu-item"
-                                        data-submenu="arab_transformations_and_al_nahda"
+                                    <div
+                                        class="submenu-item-container hide-on-desktop"
                                     >
-                                        <a href="/topics.html">
-                                            Arab Transformations and Al Nahda
-                                        </a>
-                                    </li>
-                                    <li
-                                        class="submenu-item"
-                                        data-submenu="access_to_justice"
-                                    >
-                                        <a href="#"> Access to Justice </a>
-                                    </li>
-                                    <li class="submenu-item">
-                                        <a href="#">
-                                            Social Protection and Economic
-                                            Development
-                                        </a>
-                                    </li>
-                                    <li class="submenu-item">
-                                        <a href="#">
-                                            The Question of Palestine
-                                        </a>
-                                    </li>
-                                    <li class="submenu-item">
-                                        <a href="#">
-                                            Migration, Forced Displacement, and
-                                            statelessness in the Arab World
-                                        </a>
-                                    </li>
-                                    <li class="submenu-item">
-                                        <a href="#">
-                                            Gender Justice and Youth Empowerment
-                                        </a>
-                                    </li>
+                                        <li
+                                            class="submenu-mobile-header container d-flex align-items-center"
+                                            data-submenu="arab_transformations_and_al_nahda"
+                                        >
+                                            <div
+                                                class="submenu-back-btn d-flex gap-2 align-items-center pe-4 me-4 border-end"
+                                            >
+                                                <i
+                                                    class="fa fa-chevron-left"
+                                                ></i>
+                                                back
+                                            </div>
+                                            <a href="/topics.html"> Topics </a>
+                                            <i
+                                                class="fa-solid fa-chevron-right"
+                                            ></i>
+                                        </li>
+                                    </div>
+                                    <div class="submenu-item-container">
+                                        <li
+                                            class="submenu-item container"
+                                            data-submenu="arab_transformations_and_al_nahda"
+                                        >
+                                            <a href="/#">
+                                                Arab Transformations and Al
+                                                Nahda
+                                            </a>
+                                            <i
+                                                class="fa-solid fa-angles-right"
+                                            ></i>
+                                        </li>
+                                    </div>
+
+                                    <div class="submenu-item-container">
+                                        <li
+                                            class="submenu-item container"
+                                            data-submenu="access_to_justice"
+                                        >
+                                            <a href="#"> Access to Justice </a>
+                                            <i
+                                                class="fa-solid fa-angles-right"
+                                            ></i>
+                                        </li>
+                                    </div>
+                                    <div class="submenu-item-container">
+                                        <li class="submenu-item container">
+                                            <a href="#">
+                                                Social Protection and Economic
+                                                Development
+                                            </a>
+                                            <i
+                                                class="fa-solid fa-angles-right"
+                                            ></i>
+                                        </li>
+                                    </div>
+                                    <div class="submenu-item-container">
+                                        <li class="submenu-item container">
+                                            <a href="#">
+                                                The Question of Palestine
+                                            </a>
+                                            <i
+                                                class="fa-solid fa-angles-right"
+                                            ></i>
+                                        </li>
+                                    </div>
+                                    <div class="submenu-item-container">
+                                        <li class="submenu-item container">
+                                            <a href="#">
+                                                Migration, Forced Displacement,
+                                                and statelessness in the Arab
+                                                World
+                                            </a>
+                                            <i
+                                                class="fa-solid fa-angles-right"
+                                            ></i>
+                                        </li>
+                                    </div>
+                                    <div class="submenu-item-container">
+                                        <li class="submenu-item container">
+                                            <a href="#">
+                                                Gender Justice and Youth
+                                                Empowerment
+                                            </a>
+                                            <i
+                                                class="fa-solid fa-angles-right"
+                                            ></i>
+                                        </li>
+                                    </div>
                                 </ul>
                             </div>
 
@@ -138,31 +222,81 @@
                                 data-submenu="arab_transformations_and_al_nahda"
                             >
                                 <div class="header__subsubmenu__content">
-                                    <h3 class="card-title" id="subsubmenu-title"></h3>
+                                    <h3
+                                        class="card-title hide-on-mobile"
+                                        id="subsubmenu-title"
+                                    >
+                                        Arab Transformations And Al Nahda
+                                    </h3>
+
                                     <ul class="submenu-list">
-                                        <li class="submenu-item">
-                                            <a href="#">
-                                                Revival of Al Nahda Talks
-                                            </a>
-                                        </li>
-                                        <li class="submenu-item">
-                                            <a href="#">
-                                                Peace and Conflict in the Arab
-                                                World
-                                            </a>
-                                        </li>
-                                        <li class="submenu-item">
-                                            <a href="#">
-                                                Civic Space and Society
-                                            </a>
-                                        </li>
+                                        <div
+                                            class="submenu-item-container hide-on-desktop"
+                                        >
+                                            <li
+                                                class="submenu-mobile-header container d-flex align-items-center"
+                                                data-submenu="arab_transformations_and_al_nahda"
+                                            >
+                                                <div
+                                                    class="subsubmenu-back-btn d-flex gap-2 align-items-center pe-4 me-4 border-end"
+                                                >
+                                                    <i
+                                                        class="fa fa-chevron-left"
+                                                    ></i>
+                                                    back
+                                                </div>
+                                                <a href="/topics.html">
+                                                    Arab Transformations And Al
+                                                    Nahda
+                                                </a>
+                                                <i
+                                                    class="fa-solid fa-chevron-right"
+                                                ></i>
+                                            </li>
+                                        </div>
+                                        <div class="submenu-item-container">
+                                            <li class="submenu-item container">
+                                                <a href="#">
+                                                    Revival of Al Nahda Talks
+                                                </a>
+                                                <i
+                                                    class="fa-solid fa-chevron-right hide-on-desktop"
+                                                ></i>
+                                            </li>
+                                        </div>
+                                        <div class="submenu-item-container">
+                                            <li class="submenu-item container">
+                                                <a href="#">
+                                                    Peace and Conflict in the
+                                                    Arab World
+                                                </a>
+                                                <i
+                                                    class="fa-solid fa-chevron-right hide-on-desktop"
+                                                ></i>
+                                            </li>
+                                        </div>
+                                        <div class="submenu-item-container">
+                                            <li class="submenu-item container">
+                                                <a href="#">
+                                                    Civic Space and Society
+                                                </a>
+                                                <i
+                                                    class="fa-solid fa-chevron-right hide-on-desktop"
+                                                ></i>
+                                            </li>
+                                        </div>
                                     </ul>
                                 </div>
                             </template>
 
                             <template data-submenu="access_to_justice">
                                 <div class="header__subsubmenu__content">
-                                    <h3 class="card-title" id="subsubmenu-title"></h3>
+                                    <h3
+                                        class="card-title"
+                                        id="subsubmenu-title"
+                                    >
+                                        Access To Justice
+                                    </h3>
                                     <ul class="submenu-list">
                                         <li class="submenu-item">
                                             <a href="#"> Legal Aid </a>
@@ -193,6 +327,29 @@
                                                 Justice Sector Reform
                                             </a>
                                         </li>
+                                        <!-- extra for testing -->
+                                        <li class="submenu-item">
+                                            <a href="#">
+                                                Children´s Access to Justice
+                                            </a>
+                                        </li>
+                                        <li class="submenu-item">
+                                            <a href="#">
+                                                Combating Narcotics and Drugs
+                                            </a>
+                                        </li>
+                                        <li class="submenu-item">
+                                            <a href="#">
+                                                Right to Health and
+                                                Accountability
+                                            </a>
+                                        </li>
+                                        <li class="submenu-item">
+                                            <a href="#">
+                                                Justice Sector Reform
+                                            </a>
+                                        </li>
+                                        <!-- / extra for testing -->
                                     </ul>
                                 </div>
                             </template>
@@ -214,19 +371,38 @@
                         </template>
                     </div>
                 </nav>
+                <div class="header__search-container">
+                    <div class="container">
+                        <form
+                            class="mt-5 mb-5 search-input-container"
+                            action="/search"
+                            method="get"
+                        >
+                            <input
+                                type="search"
+                                name="q"
+                                class="header__search-input"
+                                placeholder="Search alnahda"
+                            />
+                            <button type="submit">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </header>
         <main>
             <section class="hero__section">
                 <div class="container d-flex h-100">
                     <div class="img hero__image">
-                        <img src="/assets/img/image00013.jpeg" alt="exmaple" />
+                        <img src="/assets/img/image00001.jpeg" alt="exmaple" />
                     </div>
-                    <div class="row mt-auto mb-5 z-2">
+                    <div class="row mt-auto mb-3 mb-md-5 z-2">
                         <div
                             class="d-flex justify-content-between align-items-end"
                         >
-                            <div class="col-8 hero__content">
+                            <div class="col-12 col-md-8 hero__content">
                                 <h1 class="hero__title">
                                     <a href="#" class="link line-clamp-3">
                                         Al Nahda Thought Center are launching
@@ -260,7 +436,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="scroll-down-indicator">
+                            <div class="scroll-down-indicator hide-on-mobile">
                                 <svg
                                     viewBox="0 0 35 54"
                                     fill="none"
@@ -305,7 +481,7 @@
             <section class="bg-white">
                 <div class="container">
                     <div class="row hero-summary">
-                        <div class="col-6 hero-summary__content">
+                        <div class="col-12 col-md-6 hero-summary__content">
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit, sed do eiusmod tempor
@@ -340,7 +516,7 @@
                 <div class="container">
                     <div class="sticky-gallery block-section">
                         <div class="row">
-                            <div class="col-8">
+                            <div class="col-12 col-md-8 mb-4 mb-md-0">
                                 <a href="#" class="card sticky-card">
                                     <div class="card__media">
                                         <div class="img img-6_9">
@@ -371,9 +547,12 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="col-4">
+                            <div class="col-12 col-md-4">
                                 <div class="d-flex flex-column gap-4">
-                                    <a href="#" class="card">
+                                    <a
+                                        href="#"
+                                        class="card mobile-horizontal-card"
+                                    >
                                         <div class="card__media">
                                             <div class="img img-6_9">
                                                 <img
@@ -382,30 +561,40 @@
                                                 />
                                             </div>
                                         </div>
-                                        <div class="card__body">
-                                            <div class="meta card__tag">
-                                                expert comment
+                                        <div class="card__content">
+                                            <div class="card__body">
+                                                <div class="meta card__tag">
+                                                    expert comment
+                                                </div>
+                                                <h3
+                                                    class="card__header card-title line-clamp-3"
+                                                >
+                                                    Al Nahda Thought Center
+                                                </h3>
+                                                <div
+                                                    class="card__summary line-clamp-3"
+                                                >
+                                                    This new website will be a
+                                                    portal for our users. It
+                                                    contains latest news about
+                                                    the are and much more. This
+                                                    new website will be a portal
+                                                    for our users. It contains
+                                                    latest news about the are
+                                                    and much more.
+                                                </div>
                                             </div>
-                                            <h3 class="card__header card-title">
-                                                Al Nahda Thought Center
-                                            </h3>
-                                            <div
-                                                class="card__summary line-clamp-3"
-                                            >
-                                                This new website will be a
-                                                portal for our users. It
-                                                contains latest news about the
-                                                are and much more. This new
-                                                website will be a portal for our
-                                                users. It contains latest news
-                                                about the are and much more.
+                                            <div class="card__footer">
+                                                <div class="meta">
+                                                    28 july 2023
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="card__footer">
-                                            <div class="meta">28 july 2023</div>
                                         </div>
                                     </a>
-                                    <a href="#" class="card">
+                                    <a
+                                        href="#"
+                                        class="card mobile-horizontal-card"
+                                    >
                                         <div class="card__media">
                                             <div class="img img-6_9">
                                                 <img
@@ -414,30 +603,40 @@
                                                 />
                                             </div>
                                         </div>
-                                        <div class="card__body">
-                                            <div class="meta card__tag">
-                                                expert comment
+                                        <div class="card__content">
+                                            <div class="card__body">
+                                                <div class="meta card__tag">
+                                                    expert comment
+                                                </div>
+                                                <h3
+                                                    class="card__header card-title line-clamp-3"
+                                                >
+                                                    Al Nahda Thought Center
+                                                </h3>
+                                                <div
+                                                    class="card__summary line-clamp-3"
+                                                >
+                                                    This new website will be a
+                                                    portal for our users. It
+                                                    contains latest news about
+                                                    the are and much more. This
+                                                    new website will be a portal
+                                                    for our users. It contains
+                                                    latest news about the are
+                                                    and much more.
+                                                </div>
                                             </div>
-                                            <h3 class="card__header card-title">
-                                                Al Nahda Thought Center
-                                            </h3>
-                                            <div
-                                                class="card__summary line-clamp-3"
-                                            >
-                                                This new website will be a
-                                                portal for our users. It
-                                                contains latest news about the
-                                                are and much more. This new
-                                                website will be a portal for our
-                                                users. It contains latest news
-                                                about the are and much more.
+                                            <div class="card__footer">
+                                                <div class="meta">
+                                                    28 july 2023
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="card__footer">
-                                            <div class="meta">28 july 2023</div>
                                         </div>
                                     </a>
-                                    <a href="#" class="card">
+                                    <a
+                                        href="#"
+                                        class="card mobile-horizontal-card"
+                                    >
                                         <div class="card__media">
                                             <div class="img img-6_9">
                                                 <img
@@ -446,30 +645,40 @@
                                                 />
                                             </div>
                                         </div>
-                                        <div class="card__body">
-                                            <div class="meta card__tag">
-                                                expert comment
+                                        <div class="card__content">
+                                            <div class="card__body">
+                                                <div class="meta card__tag">
+                                                    expert comment
+                                                </div>
+                                                <h3
+                                                    class="card__header card-title line-clamp-3"
+                                                >
+                                                    Al Nahda Thought Center
+                                                </h3>
+                                                <div
+                                                    class="card__summary line-clamp-3"
+                                                >
+                                                    This new website will be a
+                                                    portal for our users. It
+                                                    contains latest news about
+                                                    the are and much more. This
+                                                    new website will be a portal
+                                                    for our users. It contains
+                                                    latest news about the are
+                                                    and much more.
+                                                </div>
                                             </div>
-                                            <h3 class="card__header card-title">
-                                                Al Nahda Thought Center
-                                            </h3>
-                                            <div
-                                                class="card__summary line-clamp-3"
-                                            >
-                                                This new website will be a
-                                                portal for our users. It
-                                                contains latest news about the
-                                                are and much more. This new
-                                                website will be a portal for our
-                                                users. It contains latest news
-                                                about the are and much more.
+                                            <div class="card__footer">
+                                                <div class="meta">
+                                                    28 july 2023
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="card__footer">
-                                            <div class="meta">28 july 2023</div>
                                         </div>
                                     </a>
-                                    <a href="#" class="card">
+                                    <a
+                                        href="#"
+                                        class="card mobile-horizontal-card"
+                                    >
                                         <div class="card__media">
                                             <div class="img img-6_9">
                                                 <img
@@ -478,27 +687,34 @@
                                                 />
                                             </div>
                                         </div>
-                                        <div class="card__body">
-                                            <div class="meta card__tag">
-                                                expert comment
+                                        <div class="card__content">
+                                            <div class="card__body">
+                                                <div class="meta card__tag">
+                                                    expert comment
+                                                </div>
+                                                <h3
+                                                    class="card__header card-title line-clamp-3"
+                                                >
+                                                    Al Nahda Thought Center
+                                                </h3>
+                                                <div
+                                                    class="card__summary line-clamp-3"
+                                                >
+                                                    This new website will be a
+                                                    portal for our users. It
+                                                    contains latest news about
+                                                    the are and much more. This
+                                                    new website will be a portal
+                                                    for our users. It contains
+                                                    latest news about the are
+                                                    and much more.
+                                                </div>
                                             </div>
-                                            <h3 class="card__header card-title">
-                                                Al Nahda Thought Center
-                                            </h3>
-                                            <div
-                                                class="card__summary line-clamp-3"
-                                            >
-                                                This new website will be a
-                                                portal for our users. It
-                                                contains latest news about the
-                                                are and much more. This new
-                                                website will be a portal for our
-                                                users. It contains latest news
-                                                about the are and much more.
+                                            <div class="card__footer">
+                                                <div class="meta">
+                                                    28 july 2023
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="card__footer">
-                                            <div class="meta">28 july 2023</div>
                                         </div>
                                     </a>
                                 </div>
@@ -508,11 +724,11 @@
                 </div>
             </section>
 
-            <!-- trending carousel -->
+            <!-- Trending issues -->
             <section>
                 <div class="container block-section">
                     <h2 class="section-title">
-                        <a href="#"> Trending Content </a>
+                        <a href="#"> Trending Issues </a>
                         <a href="#" class="meta">View More</a>
                     </h2>
                     <div class="carousel-container">
@@ -520,8 +736,13 @@
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <div class="row">
-                                        <div class="col-4">
-                                            <a href="#" class="card">
+                                        <div
+                                            class="col-12 mb-3 mb-md-0 col-md-4"
+                                        >
+                                            <a
+                                                href="#"
+                                                class="card mobile-horizontal-card"
+                                            >
                                                 <div class="card__media">
                                                     <div class="img img-6_9">
                                                         <img
@@ -533,7 +754,7 @@
                                                 <div class="card__content">
                                                     <div class="card__body">
                                                         <div
-                                                            class="meta card__tag card__tag-floating"
+                                                            class="meta card__tag"
                                                         >
                                                             expert comment
                                                         </div>
@@ -568,8 +789,13 @@
                                                 </div>
                                             </a>
                                         </div>
-                                        <div class="col-4">
-                                            <a href="#" class="card">
+                                        <div
+                                            class="col-12 mb-3 mb-md-0 col-md-4"
+                                        >
+                                            <a
+                                                href="#"
+                                                class="card mobile-horizontal-card"
+                                            >
                                                 <div class="card__media">
                                                     <div class="img img-6_9">
                                                         <img
@@ -581,7 +807,7 @@
                                                 <div class="card__content">
                                                     <div class="card__body">
                                                         <div
-                                                            class="meta card__tag card__tag-floating"
+                                                            class="meta card__tag"
                                                         >
                                                             expert comment
                                                         </div>
@@ -616,8 +842,13 @@
                                                 </div>
                                             </a>
                                         </div>
-                                        <div class="col-4">
-                                            <a href="#" class="card">
+                                        <div
+                                            class="col-12 mb-3 mb-md-0 col-md-4"
+                                        >
+                                            <a
+                                                href="#"
+                                                class="card mobile-horizontal-card"
+                                            >
                                                 <div class="card__media">
                                                     <div class="img img-6_9">
                                                         <img
@@ -629,7 +860,7 @@
                                                 <div class="card__content">
                                                     <div class="card__body">
                                                         <div
-                                                            class="meta card__tag card__tag-floating"
+                                                            class="meta card__tag"
                                                         >
                                                             expert comment
                                                         </div>
@@ -668,8 +899,13 @@
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="row">
-                                        <div class="col-4">
-                                            <a href="#" class="card">
+                                        <div
+                                            class="col-12 mb-3 mb-md-0 col-md-4"
+                                        >
+                                            <a
+                                                href="#"
+                                                class="card mobile-horizontal-card"
+                                            >
                                                 <div class="card__media">
                                                     <div class="img img-6_9">
                                                         <img
@@ -681,7 +917,7 @@
                                                 <div class="card__content">
                                                     <div class="card__body">
                                                         <div
-                                                            class="meta card__tag card__tag-floating"
+                                                            class="meta card__tag"
                                                         >
                                                             expert comment
                                                         </div>
@@ -716,8 +952,13 @@
                                                 </div>
                                             </a>
                                         </div>
-                                        <div class="col-4">
-                                            <a href="#" class="card">
+                                        <div
+                                            class="col-12 mb-3 mb-md-0 col-md-4"
+                                        >
+                                            <a
+                                                href="#"
+                                                class="card mobile-horizontal-card"
+                                            >
                                                 <div class="card__media">
                                                     <div class="img img-6_9">
                                                         <img
@@ -729,7 +970,7 @@
                                                 <div class="card__content">
                                                     <div class="card__body">
                                                         <div
-                                                            class="meta card__tag card__tag-floating"
+                                                            class="meta card__tag"
                                                         >
                                                             expert comment
                                                         </div>
@@ -764,8 +1005,13 @@
                                                 </div>
                                             </a>
                                         </div>
-                                        <div class="col-4">
-                                            <a href="#" class="card">
+                                        <div
+                                            class="col-12 mb-3 mb-md-0 col-md-4"
+                                        >
+                                            <a
+                                                href="#"
+                                                class="card mobile-horizontal-card"
+                                            >
                                                 <div class="card__media">
                                                     <div class="img img-6_9">
                                                         <img
@@ -777,7 +1023,7 @@
                                                 <div class="card__content">
                                                     <div class="card__body">
                                                         <div
-                                                            class="meta card__tag card__tag-floating"
+                                                            class="meta card__tag"
                                                         >
                                                             expert comment
                                                         </div>
@@ -864,7 +1110,7 @@
             <section>
                 <div class="container block-section">
                     <h2 class="section-title">
-                        <a href="#"> Last Content </a>
+                        <a href="#"> Latest Content </a>
                         <a href="#" class="meta">View More</a>
                     </h2>
                     <div class="carousel-container">
@@ -872,8 +1118,13 @@
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <div class="row">
-                                        <div class="col-4">
-                                            <a href="#" class="card">
+                                        <div
+                                            class="col-12 mb-3 mb-md-0 col-md-4"
+                                        >
+                                            <a
+                                                href="#"
+                                                class="card mobile-horizontal-card"
+                                            >
                                                 <div class="card__media">
                                                     <div class="img img-6_9">
                                                         <img
@@ -885,7 +1136,7 @@
                                                 <div class="card__content">
                                                     <div class="card__body">
                                                         <div
-                                                            class="meta card__tag card__tag-floating"
+                                                            class="meta card__tag"
                                                         >
                                                             expert comment
                                                         </div>
@@ -920,8 +1171,13 @@
                                                 </div>
                                             </a>
                                         </div>
-                                        <div class="col-4">
-                                            <a href="#" class="card">
+                                        <div
+                                            class="col-12 mb-3 mb-md-0 col-md-4"
+                                        >
+                                            <a
+                                                href="#"
+                                                class="card mobile-horizontal-card"
+                                            >
                                                 <div class="card__media">
                                                     <div class="img img-6_9">
                                                         <img
@@ -933,7 +1189,7 @@
                                                 <div class="card__content">
                                                     <div class="card__body">
                                                         <div
-                                                            class="meta card__tag card__tag-floating"
+                                                            class="meta card__tag"
                                                         >
                                                             expert comment
                                                         </div>
@@ -968,8 +1224,13 @@
                                                 </div>
                                             </a>
                                         </div>
-                                        <div class="col-4">
-                                            <a href="#" class="card">
+                                        <div
+                                            class="col-12 mb-3 mb-md-0 col-md-4"
+                                        >
+                                            <a
+                                                href="#"
+                                                class="card mobile-horizontal-card"
+                                            >
                                                 <div class="card__media">
                                                     <div class="img img-6_9">
                                                         <img
@@ -981,7 +1242,7 @@
                                                 <div class="card__content">
                                                     <div class="card__body">
                                                         <div
-                                                            class="meta card__tag card__tag-floating"
+                                                            class="meta card__tag"
                                                         >
                                                             expert comment
                                                         </div>
@@ -1020,8 +1281,13 @@
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="row">
-                                        <div class="col-4">
-                                            <a href="#" class="card">
+                                        <div
+                                            class="col-12 mb-3 mb-md-0 col-md-4"
+                                        >
+                                            <a
+                                                href="#"
+                                                class="card mobile-horizontal-card"
+                                            >
                                                 <div class="card__media">
                                                     <div class="img img-6_9">
                                                         <img
@@ -1033,7 +1299,7 @@
                                                 <div class="card__content">
                                                     <div class="card__body">
                                                         <div
-                                                            class="meta card__tag card__tag-floating"
+                                                            class="meta card__tag"
                                                         >
                                                             expert comment
                                                         </div>
@@ -1068,8 +1334,13 @@
                                                 </div>
                                             </a>
                                         </div>
-                                        <div class="col-4">
-                                            <a href="#" class="card">
+                                        <div
+                                            class="col-12 mb-3 mb-md-0 col-md-4"
+                                        >
+                                            <a
+                                                href="#"
+                                                class="card mobile-horizontal-card"
+                                            >
                                                 <div class="card__media">
                                                     <div class="img img-6_9">
                                                         <img
@@ -1081,7 +1352,7 @@
                                                 <div class="card__content">
                                                     <div class="card__body">
                                                         <div
-                                                            class="meta card__tag card__tag-floating"
+                                                            class="meta card__tag"
                                                         >
                                                             expert comment
                                                         </div>
@@ -1116,8 +1387,13 @@
                                                 </div>
                                             </a>
                                         </div>
-                                        <div class="col-4">
-                                            <a href="#" class="card">
+                                        <div
+                                            class="col-12 mb-3 mb-md-0 col-md-4"
+                                        >
+                                            <a
+                                                href="#"
+                                                class="card mobile-horizontal-card"
+                                            >
                                                 <div class="card__media">
                                                     <div class="img img-6_9">
                                                         <img
@@ -1129,7 +1405,7 @@
                                                 <div class="card__content">
                                                     <div class="card__body">
                                                         <div
-                                                            class="meta card__tag card__tag-floating"
+                                                            class="meta card__tag"
                                                         >
                                                             expert comment
                                                         </div>
@@ -1220,311 +1496,276 @@
                         <a href="#" class="meta">View More</a>
                     </h2>
                     <div class="carousel-container">
-                        <div class="swiper swiper-container">
-                            <div class="swiper-wrapper">
+                        <div class="swiper swiper-container swiper-initialized swiper-horizontal swiper-backface-hidden">
+                            <div class="swiper-wrapper" id="swiper-wrapper-c867e054cb572d22" aria-live="polite">
                                 <div class="swiper-slide">
                                     <div class="row">
-                                        <div class="col-4">
-                                            <a href="#" class="card">
+                                        <div class="col-12 mb-3 mb-md-0 col-md-4">
+                                            <a href="#" class="card mobile-horizontal-card">
                                                 <div class="card__media">
                                                     <div class="img img-6_9">
-                                                        <img
-                                                            src="/assets/img/exampleImg.png"
-                                                            alt="exampleImg"
-                                                        />
+                                                        <img src="/assets/img/exampleImg.png" alt="exampleImg">
                                                     </div>
                                                 </div>
                                                 <div class="card__content">
                                                     <div class="card__body">
-                                                        <h3
-                                                            class="card__header card-title line-clamp-3"
-                                                        >
+                                                        <h3 class="card__header card-title line-clamp-3">
                                                             Al Nahda Thought
                                                             Center Event Title
                                                         </h3>
                                                     </div>
                                                     <div class="card__footer">
-                                                        <div
-                                                            class="event-metadata-wrapper"
-                                                        >
-                                                            <div
-                                                                class="event-metadata__location"
-                                                            >
+                                                        <div class="event-metadata-wrapper">
+                                                            <div class="event-metadata__location">
                                                                 jordan
                                                             </div>
-                                                            <div
-                                                                class="event-metadata"
-                                                            >
-                                                                <div
-                                                                    class="event-metadata__datetime"
-                                                                >
-                                                                    <span
-                                                                        >12
+                                                            <div class="event-metadata">
+                                                                <div class="event-metadata__datetime">
+                                                                    <span>12
                                                                         October
-                                                                        2023</span
-                                                                    >
-                                                                    <span
-                                                                        >3:30PM
+                                                                        2023</span>
+                                                                    <span>3:30PM
                                                                         -
-                                                                        5:00PM</span
-                                                                    >
+                                                                        5:00PM</span>
                                                                 </div>
                                                             </div>
-                                                            <div
-                                                                class="event-metadata__play-icon"
-                                                            >
-                                                                <i
-                                                                    class="fa fa-play"
-                                                                ></i>
+                                                            <div class="event-metadata__play-icon">
+                                                                <i class="fa fa-play"></i>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </a>
-                                            
                                         </div>
-                                        <div class="col-4">
-                                            <a href="#" class="card">
+                                        <div class="col-12 mb-3 mb-md-0 col-md-4">
+                                            <a href="#" class="card mobile-horizontal-card">
                                                 <div class="card__media">
                                                     <div class="img img-6_9">
-                                                        <img
-                                                            src="/assets/img/exampleImg.png"
-                                                            alt="exampleImg"
-                                                        />
+                                                        <img src="/assets/img/exampleImg.png" alt="exampleImg">
                                                     </div>
                                                 </div>
                                                 <div class="card__content">
                                                     <div class="card__body">
-                                                        <h3
-                                                            class="card__header card-title line-clamp-3"
-                                                        >
+                                                        <h3 class="card__header card-title line-clamp-3">
                                                             Al Nahda Thought
                                                             Center Event Title
                                                         </h3>
                                                     </div>
                                                     <div class="card__footer">
-                                                        <div
-                                                            class="event-metadata-wrapper"
-                                                        >
-                                                            <div
-                                                                class="event-metadata__location"
-                                                            >
+                                                        <div class="event-metadata-wrapper">
+                                                            <div class="event-metadata__location">
                                                                 jordan
                                                             </div>
-                                                            <div
-                                                                class="event-metadata"
-                                                            >
-                                                                <div
-                                                                    class="event-metadata__datetime"
-                                                                >
-                                                                    <span
-                                                                        >12
+                                                            <div class="event-metadata">
+                                                                <div class="event-metadata__datetime">
+                                                                    <span>12
                                                                         October
-                                                                        2023</span
-                                                                    >
-                                                                    <span
-                                                                        >3:30PM
+                                                                        2023</span>
+                                                                    <span>3:30PM
                                                                         -
-                                                                        5:00PM</span
-                                                                    >
+                                                                        5:00PM</span>
                                                                 </div>
                                                             </div>
-                                                            <div
-                                                                class="event-metadata__play-icon"
-                                                            >
-                                                                <i
-                                                                    class="fa fa-play"
-                                                                ></i>
+                                                            <div class="event-metadata__play-icon">
+                                                                <i class="fa fa-play"></i>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </a>
-                                            
                                         </div>
-                                        <div class="col-4">
-                                            <a href="#" class="card">
+                                        <div class="col-12 mb-3 mb-md-0 col-md-4">
+                                            <a href="#" class="card mobile-horizontal-card">
                                                 <div class="card__media">
                                                     <div class="img img-6_9">
-                                                        <img
-                                                            src="/assets/img/exampleImg.png"
-                                                            alt="exampleImg"
-                                                        />
+                                                        <img src="/assets/img/exampleImg.png" alt="exampleImg">
                                                     </div>
                                                 </div>
                                                 <div class="card__content">
                                                     <div class="card__body">
-                                                        <h3
-                                                            class="card__header card-title line-clamp-3"
-                                                        >
+                                                        <h3 class="card__header card-title line-clamp-3">
                                                             Al Nahda Thought
                                                             Center Event Title
                                                         </h3>
                                                     </div>
                                                     <div class="card__footer">
-                                                        <div
-                                                            class="event-metadata-wrapper"
-                                                        >
-                                                            <div
-                                                                class="event-metadata__location"
-                                                            >
+                                                        <div class="event-metadata-wrapper">
+                                                            <div class="event-metadata__location">
                                                                 jordan
                                                             </div>
-                                                            <div
-                                                                class="event-metadata"
-                                                            >
-                                                                <div
-                                                                    class="event-metadata__datetime"
-                                                                >
-                                                                    <span
-                                                                        >12
+                                                            <div class="event-metadata">
+                                                                <div class="event-metadata__datetime">
+                                                                    <span>12
                                                                         October
-                                                                        2023</span
-                                                                    >
-                                                                    <span
-                                                                        >3:30PM
+                                                                        2023</span>
+                                                                    <span>3:30PM
                                                                         -
-                                                                        5:00PM</span
-                                                                    >
+                                                                        5:00PM</span>
                                                                 </div>
                                                             </div>
-                                                            <div
-                                                                class="event-metadata__play-icon"
-                                                            >
-                                                                <i
-                                                                    class="fa fa-play"
-                                                                ></i>
+                                                            <div class="event-metadata__play-icon">
+                                                                <i class="fa fa-play"></i>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </a>
-                                            
                                         </div>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="row">
-                                        <div class="col-4">
-                                            <a href="#" class="card">
+                                        <div class="col-12 mb-3 mb-md-0 col-md-4">
+                                            <a href="#" class="card mobile-horizontal-card">
                                                 <div class="card__media">
                                                     <div class="img img-6_9">
-                                                        <img
-                                                            src="/assets/img/exampleImg.png"
-                                                            alt="exampleImg"
-                                                        />
+                                                        <img src="/assets/img/exampleImg.png" alt="exampleImg">
                                                     </div>
                                                 </div>
                                                 <div class="card__content">
                                                     <div class="card__body">
-                                                        <h3
-                                                            class="card__header card-title line-clamp-3"
-                                                        >
+                                                        <h3 class="card__header card-title line-clamp-3">
                                                             Al Nahda Thought
                                                             Center Event Title
                                                         </h3>
                                                     </div>
                                                     <div class="card__footer">
-                                                        <div
-                                                            class="event-metadata-wrapper"
-                                                        >
-                                                            <div
-                                                                class="event-metadata__location"
-                                                            >
+                                                        <div class="event-metadata-wrapper">
+                                                            <div class="event-metadata__location">
                                                                 jordan
                                                             </div>
-                                                            <div
-                                                                class="event-metadata"
-                                                            >
-                                                                <div
-                                                                    class="event-metadata__datetime"
-                                                                >
-                                                                    <span
-                                                                        >12
+                                                            <div class="event-metadata">
+                                                                <div class="event-metadata__datetime">
+                                                                    <span>12
                                                                         October
-                                                                        2023</span
-                                                                    >
-                                                                    <span
-                                                                        >3:30PM
+                                                                        2023</span>
+                                                                    <span>3:30PM
                                                                         -
-                                                                        5:00PM</span
-                                                                    >
+                                                                        5:00PM</span>
                                                                 </div>
                                                             </div>
-                                                            <div
-                                                                class="event-metadata__play-icon"
-                                                            >
-                                                                <i
-                                                                    class="fa fa-play"
-                                                                ></i>
+                                                            <div class="event-metadata__play-icon">
+                                                                <i class="fa fa-play"></i>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </a>
-                                            
                                         </div>
-                                        <div class="col-4">
-                                            <a href="#" class="card">
+                                        <div class="col-12 mb-3 mb-md-0 col-md-4">
+                                            <a href="#" class="card mobile-horizontal-card">
                                                 <div class="card__media">
                                                     <div class="img img-6_9">
-                                                        <img
-                                                            src="/assets/img/exampleImg.png"
-                                                            alt="exampleImg"
-                                                        />
+                                                        <img src="/assets/img/exampleImg.png" alt="exampleImg">
                                                     </div>
                                                 </div>
                                                 <div class="card__content">
                                                     <div class="card__body">
-                                                        <h3
-                                                            class="card__header card-title line-clamp-3"
-                                                        >
+                                                        <h3 class="card__header card-title line-clamp-3">
                                                             Al Nahda Thought
                                                             Center Event Title
                                                         </h3>
                                                     </div>
                                                     <div class="card__footer">
-                                                        <div
-                                                            class="event-metadata-wrapper"
-                                                        >
-                                                            <div
-                                                                class="event-metadata__location"
-                                                            >
+                                                        <div class="event-metadata-wrapper">
+                                                            <div class="event-metadata__location">
                                                                 jordan
                                                             </div>
-                                                            <div
-                                                                class="event-metadata"
-                                                            >
-                                                                <div
-                                                                    class="event-metadata__datetime"
-                                                                >
-                                                                    <span
-                                                                        >12
+                                                            <div class="event-metadata">
+                                                                <div class="event-metadata__datetime">
+                                                                    <span>12
                                                                         October
-                                                                        2023</span
-                                                                    >
-                                                                    <span
-                                                                        >3:30PM
+                                                                        2023</span>
+                                                                    <span>3:30PM
                                                                         -
-                                                                        5:00PM</span
-                                                                    >
+                                                                        5:00PM</span>
                                                                 </div>
                                                             </div>
-                                                            <div
-                                                                class="event-metadata__play-icon"
-                                                            >
-                                                                <i
-                                                                    class="fa fa-play"
-                                                                ></i>
+                                                            <div class="event-metadata__play-icon">
+                                                                <i class="fa fa-play"></i>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </a>
-                                            
                                         </div>
-                                        <div class="col-4">
-                                            <a href="#" class="card">
+                                        <div class="col-12 mb-3 mb-md-0 col-md-4">
+                                            <a href="#" class="card mobile-horizontal-card">
+                                                <div class="card__media">
+                                                    <div class="img img-6_9">
+                                                        <img src="/assets/img/exampleImg.png" alt="exampleImg">
+                                                    </div>
+                                                </div>
+                                                <div class="card__content">
+                                                    <div class="card__body">
+                                                        <h3 class="card__header card-title line-clamp-3">
+                                                            Al Nahda Thought
+                                                            Center Event Title
+                                                        </h3>
+                                                    </div>
+                                                    <div class="card__footer">
+                                                        <div class="event-metadata-wrapper">
+                                                            <div class="event-metadata__location">
+                                                                jordan
+                                                            </div>
+                                                            <div class="event-metadata">
+                                                                <div class="event-metadata__datetime">
+                                                                    <span>12
+                                                                        October
+                                                                        2023</span>
+                                                                    <span>3:30PM
+                                                                        -
+                                                                        5:00PM</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="event-metadata__play-icon">
+                                                                <i class="fa fa-play"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+
+                        <div class="carousel-next-btn hide-on-desktop hide-on-mobile">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="24" viewBox="0 0 13 24" fill="none">
+                                <path d="M1.14583 22.9697L12.1664 11.9492L1.14583 0.928625" stroke="#B0B0B0" stroke-width="1.46469" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                        <div class="carousel-prev-btn hide-on-desktop hide-on-mobile">
+                            <svg width="13" height="24" viewBox="0 0 13 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.1843 0.92865L1.1637 11.9492L12.1843 22.9698" stroke="#B0B0B0" stroke-width="1.46469" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                        <div class="swiper-pagination swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" aria-current="true"></span><span class="swiper-pagination-bullet"></span></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Upcoming Events -->
+            <section>
+                <div class="container block-section">
+                    <h2 class="section-title">
+                        <a href="#"> Upcoming Events </a>
+                        <a href="#" class="meta">View More</a>
+                    </h2>
+                    <div class="carousel-container">
+                        <div class="swiper swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="row">
+                                        <div
+                                            class="col-12 mb-3 mb-md-0 col-md-4"
+                                        >
+                                            <a
+                                                href="#"
+                                                class="card mobile-horizontal-card"
+                                            >
                                                 <div class="card__media">
                                                     <div class="img img-6_9">
                                                         <img
@@ -1569,18 +1810,294 @@
                                                                     >
                                                                 </div>
                                                             </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div
+                                            class="col-12 mb-3 mb-md-0 col-md-4"
+                                        >
+                                            <a
+                                                href="#"
+                                                class="card mobile-horizontal-card"
+                                            >
+                                                <div class="card__media">
+                                                    <div class="img img-6_9">
+                                                        <img
+                                                            src="/assets/img/exampleImg.png"
+                                                            alt="exampleImg"
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <div class="card__content">
+                                                    <div class="card__body">
+                                                        <h3
+                                                            class="card__header card-title line-clamp-3"
+                                                        >
+                                                            Al Nahda Thought
+                                                            Center Event Title
+                                                        </h3>
+                                                    </div>
+                                                    <div class="card__footer">
+                                                        <div
+                                                            class="event-metadata-wrapper"
+                                                        >
                                                             <div
-                                                                class="event-metadata__play-icon"
+                                                                class="event-metadata__location"
                                                             >
-                                                                <i
-                                                                    class="fa fa-play"
-                                                                ></i>
+                                                                jordan
+                                                            </div>
+                                                            <div
+                                                                class="event-metadata"
+                                                            >
+                                                                <div
+                                                                    class="event-metadata__datetime"
+                                                                >
+                                                                    <span
+                                                                        >12
+                                                                        October
+                                                                        2023</span
+                                                                    >
+                                                                    <span
+                                                                        >3:30PM
+                                                                        -
+                                                                        5:00PM</span
+                                                                    >
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </a>
-                                            
+                                        </div>
+                                        <div
+                                            class="col-12 mb-3 mb-md-0 col-md-4"
+                                        >
+                                            <a
+                                                href="#"
+                                                class="card mobile-horizontal-card"
+                                            >
+                                                <div class="card__media">
+                                                    <div class="img img-6_9">
+                                                        <img
+                                                            src="/assets/img/exampleImg.png"
+                                                            alt="exampleImg"
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <div class="card__content">
+                                                    <div class="card__body">
+                                                        <h3
+                                                            class="card__header card-title line-clamp-3"
+                                                        >
+                                                            Al Nahda Thought
+                                                            Center Event Title
+                                                        </h3>
+                                                    </div>
+                                                    <div class="card__footer">
+                                                        <div
+                                                            class="event-metadata-wrapper"
+                                                        >
+                                                            <div
+                                                                class="event-metadata__location"
+                                                            >
+                                                                jordan
+                                                            </div>
+                                                            <div
+                                                                class="event-metadata"
+                                                            >
+                                                                <div
+                                                                    class="event-metadata__datetime"
+                                                                >
+                                                                    <span
+                                                                        >12
+                                                                        October
+                                                                        2023</span
+                                                                    >
+                                                                    <span
+                                                                        >3:30PM
+                                                                        -
+                                                                        5:00PM</span
+                                                                    >
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="row">
+                                        <div
+                                            class="col-12 mb-3 mb-md-0 col-md-4"
+                                        >
+                                            <a
+                                                href="#"
+                                                class="card mobile-horizontal-card"
+                                            >
+                                                <div class="card__media">
+                                                    <div class="img img-6_9">
+                                                        <img
+                                                            src="/assets/img/exampleImg.png"
+                                                            alt="exampleImg"
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <div class="card__content">
+                                                    <div class="card__body">
+                                                        <h3
+                                                            class="card__header card-title line-clamp-3"
+                                                        >
+                                                            Al Nahda Thought
+                                                            Center Event Title
+                                                        </h3>
+                                                    </div>
+                                                    <div class="card__footer">
+                                                        <div
+                                                            class="event-metadata-wrapper"
+                                                        >
+                                                            <div
+                                                                class="event-metadata__location"
+                                                            >
+                                                                jordan
+                                                            </div>
+                                                            <div
+                                                                class="event-metadata"
+                                                            >
+                                                                <div
+                                                                    class="event-metadata__datetime"
+                                                                >
+                                                                    <span
+                                                                        >12
+                                                                        October
+                                                                        2023</span
+                                                                    >
+                                                                    <span
+                                                                        >3:30PM
+                                                                        -
+                                                                        5:00PM</span
+                                                                    >
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div
+                                            class="col-12 mb-3 mb-md-0 col-md-4"
+                                        >
+                                            <a
+                                                href="#"
+                                                class="card mobile-horizontal-card"
+                                            >
+                                                <div class="card__media">
+                                                    <div class="img img-6_9">
+                                                        <img
+                                                            src="/assets/img/exampleImg.png"
+                                                            alt="exampleImg"
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <div class="card__content">
+                                                    <div class="card__body">
+                                                        <h3
+                                                            class="card__header card-title line-clamp-3"
+                                                        >
+                                                            Al Nahda Thought
+                                                            Center Event Title
+                                                        </h3>
+                                                    </div>
+                                                    <div class="card__footer">
+                                                        <div
+                                                            class="event-metadata-wrapper"
+                                                        >
+                                                            <div
+                                                                class="event-metadata__location"
+                                                            >
+                                                                jordan
+                                                            </div>
+                                                            <div
+                                                                class="event-metadata"
+                                                            >
+                                                                <div
+                                                                    class="event-metadata__datetime"
+                                                                >
+                                                                    <span
+                                                                        >12
+                                                                        October
+                                                                        2023</span
+                                                                    >
+                                                                    <span
+                                                                        >3:30PM
+                                                                        -
+                                                                        5:00PM</span
+                                                                    >
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div
+                                            class="col-12 mb-3 mb-md-0 col-md-4"
+                                        >
+                                            <a
+                                                href="#"
+                                                class="card mobile-horizontal-card"
+                                            >
+                                                <div class="card__media">
+                                                    <div class="img img-6_9">
+                                                        <img
+                                                            src="/assets/img/exampleImg.png"
+                                                            alt="exampleImg"
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <div class="card__content">
+                                                    <div class="card__body">
+                                                        <h3
+                                                            class="card__header card-title line-clamp-3"
+                                                        >
+                                                            Al Nahda Thought
+                                                            Center Event Title
+                                                        </h3>
+                                                    </div>
+                                                    <div class="card__footer">
+                                                        <div
+                                                            class="event-metadata-wrapper"
+                                                        >
+                                                            <div
+                                                                class="event-metadata__location"
+                                                            >
+                                                                jordan
+                                                            </div>
+                                                            <div
+                                                                class="event-metadata"
+                                                            >
+                                                                <div
+                                                                    class="event-metadata__datetime"
+                                                                >
+                                                                    <span
+                                                                        >12
+                                                                        October
+                                                                        2023</span
+                                                                    >
+                                                                    <span
+                                                                        >3:30PM
+                                                                        -
+                                                                        5:00PM</span
+                                                                    >
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -1629,399 +2146,15 @@
                     </div>
                 </div>
             </section>
-
-
-            <!-- upcoming events -->
-                        <!-- Upcoming Events -->
-                        <section>
-                            <div class="container block-section">
-                                <h2 class="section-title">
-                                    <a href="#"> Upcoming Events </a>
-                                    <a href="#" class="meta">View More</a>
-                                </h2>
-                                <div class="carousel-container">
-                                    <div class="swiper swiper-container">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
-                                                <div class="row">
-                                                    <div class="col-4">
-                                                        <a href="#" class="card">
-                                                            <div class="card__media">
-                                                                <div class="img img-6_9">
-                                                                    <img
-                                                                        src="/assets/img/exampleImg.png"
-                                                                        alt="exampleImg"
-                                                                    />
-                                                                </div>
-                                                            </div>
-                                                            <div class="card__content">
-                                                                <div class="card__body">
-                                                                    <h3
-                                                                        class="card__header card-title line-clamp-3"
-                                                                    >
-                                                                        Al Nahda Thought
-                                                                        Center Event Title
-                                                                    </h3>
-                                                                </div>
-                                                                <div class="card__footer">
-                                                                    <div
-                                                                        class="event-metadata-wrapper"
-                                                                    >
-                                                                        <div
-                                                                            class="event-metadata__location"
-                                                                        >
-                                                                            jordan
-                                                                        </div>
-                                                                        <div
-                                                                            class="event-metadata"
-                                                                        >
-                                                                            <div
-                                                                                class="event-metadata__datetime"
-                                                                            >
-                                                                                <span
-                                                                                    >12
-                                                                                    October
-                                                                                    2023</span
-                                                                                >
-                                                                                <span
-                                                                                    >3:30PM
-                                                                                    -
-                                                                                    5:00PM</span
-                                                                                >
-                                                                            </div>
-                                                                        </div>
-                                                                        
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                        
-                                                    </div>
-                                                    <div class="col-4">
-                                                        <a href="#" class="card">
-                                                            <div class="card__media">
-                                                                <div class="img img-6_9">
-                                                                    <img
-                                                                        src="/assets/img/exampleImg.png"
-                                                                        alt="exampleImg"
-                                                                    />
-                                                                </div>
-                                                            </div>
-                                                            <div class="card__content">
-                                                                <div class="card__body">
-                                                                    <h3
-                                                                        class="card__header card-title line-clamp-3"
-                                                                    >
-                                                                        Al Nahda Thought
-                                                                        Center Event Title
-                                                                    </h3>
-                                                                </div>
-                                                                <div class="card__footer">
-                                                                    <div
-                                                                        class="event-metadata-wrapper"
-                                                                    >
-                                                                        <div
-                                                                            class="event-metadata__location"
-                                                                        >
-                                                                            jordan
-                                                                        </div>
-                                                                        <div
-                                                                            class="event-metadata"
-                                                                        >
-                                                                            <div
-                                                                                class="event-metadata__datetime"
-                                                                            >
-                                                                                <span
-                                                                                    >12
-                                                                                    October
-                                                                                    2023</span
-                                                                                >
-                                                                                <span
-                                                                                    >3:30PM
-                                                                                    -
-                                                                                    5:00PM</span
-                                                                                >
-                                                                            </div>
-                                                                        </div>
-                                                                        
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                        
-                                                    </div>
-                                                    <div class="col-4">
-                                                        <a href="#" class="card">
-                                                            <div class="card__media">
-                                                                <div class="img img-6_9">
-                                                                    <img
-                                                                        src="/assets/img/exampleImg.png"
-                                                                        alt="exampleImg"
-                                                                    />
-                                                                </div>
-                                                            </div>
-                                                            <div class="card__content">
-                                                                <div class="card__body">
-                                                                    <h3
-                                                                        class="card__header card-title line-clamp-3"
-                                                                    >
-                                                                        Al Nahda Thought
-                                                                        Center Event Title
-                                                                    </h3>
-                                                                </div>
-                                                                <div class="card__footer">
-                                                                    <div
-                                                                        class="event-metadata-wrapper"
-                                                                    >
-                                                                        <div
-                                                                            class="event-metadata__location"
-                                                                        >
-                                                                            jordan
-                                                                        </div>
-                                                                        <div
-                                                                            class="event-metadata"
-                                                                        >
-                                                                            <div
-                                                                                class="event-metadata__datetime"
-                                                                            >
-                                                                                <span
-                                                                                    >12
-                                                                                    October
-                                                                                    2023</span
-                                                                                >
-                                                                                <span
-                                                                                    >3:30PM
-                                                                                    -
-                                                                                    5:00PM</span
-                                                                                >
-                                                                            </div>
-                                                                        </div>
-                                                                        
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                        
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="row">
-                                                    <div class="col-4">
-                                                        <a href="#" class="card">
-                                                            <div class="card__media">
-                                                                <div class="img img-6_9">
-                                                                    <img
-                                                                        src="/assets/img/exampleImg.png"
-                                                                        alt="exampleImg"
-                                                                    />
-                                                                </div>
-                                                            </div>
-                                                            <div class="card__content">
-                                                                <div class="card__body">
-                                                                    <h3
-                                                                        class="card__header card-title line-clamp-3"
-                                                                    >
-                                                                        Al Nahda Thought
-                                                                        Center Event Title
-                                                                    </h3>
-                                                                </div>
-                                                                <div class="card__footer">
-                                                                    <div
-                                                                        class="event-metadata-wrapper"
-                                                                    >
-                                                                        <div
-                                                                            class="event-metadata__location"
-                                                                        >
-                                                                            jordan
-                                                                        </div>
-                                                                        <div
-                                                                            class="event-metadata"
-                                                                        >
-                                                                            <div
-                                                                                class="event-metadata__datetime"
-                                                                            >
-                                                                                <span
-                                                                                    >12
-                                                                                    October
-                                                                                    2023</span
-                                                                                >
-                                                                                <span
-                                                                                    >3:30PM
-                                                                                    -
-                                                                                    5:00PM</span
-                                                                                >
-                                                                            </div>
-                                                                        </div>
-                                                                        
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                        
-                                                    </div>
-                                                    <div class="col-4">
-                                                        <a href="#" class="card">
-                                                            <div class="card__media">
-                                                                <div class="img img-6_9">
-                                                                    <img
-                                                                        src="/assets/img/exampleImg.png"
-                                                                        alt="exampleImg"
-                                                                    />
-                                                                </div>
-                                                            </div>
-                                                            <div class="card__content">
-                                                                <div class="card__body">
-                                                                    <h3
-                                                                        class="card__header card-title line-clamp-3"
-                                                                    >
-                                                                        Al Nahda Thought
-                                                                        Center Event Title
-                                                                    </h3>
-                                                                </div>
-                                                                <div class="card__footer">
-                                                                    <div
-                                                                        class="event-metadata-wrapper"
-                                                                    >
-                                                                        <div
-                                                                            class="event-metadata__location"
-                                                                        >
-                                                                            jordan
-                                                                        </div>
-                                                                        <div
-                                                                            class="event-metadata"
-                                                                        >
-                                                                            <div
-                                                                                class="event-metadata__datetime"
-                                                                            >
-                                                                                <span
-                                                                                    >12
-                                                                                    October
-                                                                                    2023</span
-                                                                                >
-                                                                                <span
-                                                                                    >3:30PM
-                                                                                    -
-                                                                                    5:00PM</span
-                                                                                >
-                                                                            </div>
-                                                                        </div>
-                                                                        
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                        
-                                                    </div>
-                                                    <div class="col-4">
-                                                        <a href="#" class="card">
-                                                            <div class="card__media">
-                                                                <div class="img img-6_9">
-                                                                    <img
-                                                                        src="/assets/img/exampleImg.png"
-                                                                        alt="exampleImg"
-                                                                    />
-                                                                </div>
-                                                            </div>
-                                                            <div class="card__content">
-                                                                <div class="card__body">
-                                                                    <h3
-                                                                        class="card__header card-title line-clamp-3"
-                                                                    >
-                                                                        Al Nahda Thought
-                                                                        Center Event Title
-                                                                    </h3>
-                                                                </div>
-                                                                <div class="card__footer">
-                                                                    <div
-                                                                        class="event-metadata-wrapper"
-                                                                    >
-                                                                        <div
-                                                                            class="event-metadata__location"
-                                                                        >
-                                                                            jordan
-                                                                        </div>
-                                                                        <div
-                                                                            class="event-metadata"
-                                                                        >
-                                                                            <div
-                                                                                class="event-metadata__datetime"
-                                                                            >
-                                                                                <span
-                                                                                    >12
-                                                                                    October
-                                                                                    2023</span
-                                                                                >
-                                                                                <span
-                                                                                    >3:30PM
-                                                                                    -
-                                                                                    5:00PM</span
-                                                                                >
-                                                                            </div>
-                                                                        </div>
-                                                                        
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                        
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                        </div>
-                                    </div>
-            
-                                    <div
-                                        class="carousel-next-btn hide-on-desktop hide-on-mobile"
-                                    >
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="13"
-                                            height="24"
-                                            viewBox="0 0 13 24"
-                                            fill="none"
-                                        >
-                                            <path
-                                                d="M1.14583 22.9697L12.1664 11.9492L1.14583 0.928625"
-                                                stroke="#B0B0B0"
-                                                stroke-width="1.46469"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                            />
-                                        </svg>
-                                    </div>
-                                    <div
-                                        class="carousel-prev-btn hide-on-desktop hide-on-mobile"
-                                    >
-                                        <svg
-                                            width="13"
-                                            height="24"
-                                            viewBox="0 0 13 24"
-                                            fill="none"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                        >
-                                            <path
-                                                d="M12.1843 0.92865L1.1637 11.9492L12.1843 22.9698"
-                                                stroke="#B0B0B0"
-                                                stroke-width="1.46469"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                            />
-                                        </svg>
-                                    </div>
-                                    <div class="swiper-pagination"></div>
-                                </div>
-                            </div>
-                        </section>
         </main>
 
-        
         <footer>
             <div class="footer-section">
                 <div class="container">
                     <div class="row">
-                        <div class="col-4 email-collector social-reach">
+                        <div
+                            class="col-12 mb-5 mb-md-0 col-md-4 email-collector social-reach"
+                        >
                             <h3 class="card-title mb-3">
                                 Subscribe to our email newsletter
                             </h3>
@@ -2040,7 +2173,7 @@
                                 <button type="button">Subscribe →</button>
                             </div>
                         </div>
-                        <div class="col-4 offset-4 social-follow">
+                        <div class="col-12 col-md-4 offset-md-4 social-follow">
                             <h3 class="card-title">
                                 Follow us on social media
                             </h3>
@@ -2118,12 +2251,17 @@
             </div>
         </footer>
 
+        <script>
+            const isMobile = () => window.innerWidth < 768;
+        </script>
+        <!-- change 1 -->
         <!-- header -->
         <script>
             let activeMenuItem,
                 activeSubmenuItem,
                 headerBackgroundChangethreshold = 150,
-                menuOpened = false;
+                menuOpened = false,
+                searchOpened = false;
 
             const header = document.querySelector("header.header");
             const navbar = header.querySelector(".header__nav_bar");
@@ -2139,17 +2277,70 @@
             const subSubMenuPlaceholder = subMenu.querySelector(
                 ".header__subsubmenu__placeholder"
             );
-            const submenuSeparator = document.querySelector('.header__submenu__separator');
+            const submenuSeparator = document.querySelector(
+                ".header__submenu__separator"
+            );
             const openMenuBtn = header.querySelector(
                 ".header__hamburger-menu .open-icon"
             );
             const closeMenuBtn = header.querySelector(
                 ".header__hamburger-menu .close-icon"
             );
+            const searchContainer = document.querySelector(
+                ".header .header__search-container"
+            );
+            const searchBtn = document.querySelector(
+                ".header .header__search_btn"
+            );
+            const searchInput = document.querySelector(
+                ".header .header__search-input"
+            );
 
-            const recalculateSubMenuHeight = (cuurentSubMenu) => {
-                if (!cuurentSubMenu) return;
-                if (!cuurentSubMenu.innerHTML) {
+            const setMenuOpened = (bool) => {
+                menuOpened = bool;
+                if (menuOpened) {
+                    if (searchOpened) toggleSearchOpen();
+                    document.body.style.overflow = "hidden";
+                } else {
+                    document.body.style.overflow = "auto";
+                }
+            };
+            const setSearchOpened = (bool) => {
+                searchOpened = bool;
+                if (searchOpened && (menuOpened || activeMenuItem)) {
+                    closeMenu();
+                    closeSubmenu();
+                }
+                toggleSearchInHeader();
+                searchInput.focus();
+            };
+
+            const resizeMenuHeightOnSubmenuOpen = (cuurentSubSubmenu) => {
+                if (!cuurentSubSubmenu?.innerHTML) {
+                    subMenu.animate(
+                        {
+                            height: "0px",
+                        },
+                        { duration: 300, fill: "forwards" }
+                    );
+                    return;
+                }
+                const clientBounding =
+                    cuurentSubSubmenu.getBoundingClientRect();
+                const { height } = clientBounding;
+                console.log(height);
+                const currentHeight = subMenu.getBoundingClientRect();
+                if (currentHeight >= height) return;
+                subMenu.animate(
+                    {
+                        height: height + "px",
+                    },
+                    { duration: 300, fill: "forwards" }
+                );
+            };
+
+            const toggleMenuHeight = (cuurentSubMenu) => {
+                if (!cuurentSubMenu?.innerHTML) {
                     subMenu.animate(
                         {
                             height: "0px",
@@ -2168,12 +2359,84 @@
                 );
             };
 
-            const closeSubmenu = () => {
-                subMenuPlaceholder.innerHTML = "";
+            const toggleSearchInHeader = () => {
+                if (searchOpened) {
+                    searchContainer.animate(
+                        {
+                            height: "120px",
+                        },
+                        { duration: 300, fill: "forwards" }
+                    );
+                    return;
+                } else {
+                    searchContainer.animate(
+                        {
+                            height: "0px",
+                        },
+                        { duration: 300, fill: "forwards" }
+                    );
+                }
+            };
+
+            const closeMenu = () => {
+                navbar.classList.remove("menu-opened");
+                openMenuBtn.style.display = "block";
+                closeMenuBtn.style.display = "none";
+                setMenuOpened(false);
+                console.log(isMobile());
                 if (window.scrollY <= headerBackgroundChangethreshold)
                     header.classList.remove("light");
+            };
+
+            const closeSubmenu = () => {
+                subMenuPlaceholder.innerHTML = "";
+                if (
+                    window.scrollY <= headerBackgroundChangethreshold &&
+                    !isMobile()
+                )
+                    header.classList.remove("light");
                 activeMenuItem = "";
-                recalculateSubMenuHeight(subMenuPlaceholder);
+                toggleMenuHeight(subMenuPlaceholder);
+            };
+
+            const toggleSearchOpen = () => {
+                if (searchOpened) {
+                    setSearchOpened(false);
+                    header.classList.remove("search-opened");
+                    if (window.scrollY <= headerBackgroundChangethreshold)
+                        header.classList.remove("light");
+                } else {
+                    setSearchOpened(true);
+                    header.classList.add("search-opened");
+                    header.classList.add("light");
+                }
+            };
+
+            const getTemplate = (subMenuItem) => {
+                const submenuName = subMenuItem.dataset.submenu;
+                if (!submenuName) return;
+                if (activeSubmenuItem === submenuName) return;
+                activeSubmenuItem = submenuName;
+                submenuSeparator.style.opacity = 1;
+                let template = document.querySelector(
+                    `template[data-submenu=${submenuName}]`
+                );
+                if (!template) return;
+                template = template.content.cloneNode(true);
+                return template;
+            };
+
+            const populateTemplate = (subMenuItem) => {
+                const template = getTemplate(subMenuItem);
+                if (!template) return;
+                subSubMenuPlaceholder.innerHTML = "";
+                subSubMenuPlaceholder.appendChild(template);
+                resizeMenuHeightOnSubmenuOpen(subSubMenuPlaceholder);
+                document.querySelector(".header .subsubmenu-back-btn").onclick =
+                    () => {
+                        header.classList.remove("subsubmenu-opened");
+                        activeMenuItem = null;
+                    };
             };
 
             const addListenersToSubmenus = (submenu) => {
@@ -2182,66 +2445,55 @@
                 ];
                 submenuItems.forEach((subMenuItem) => {
                     if (!subSubMenuPlaceholder) return;
-                    
-                    const getTemplate = (subMenuItem) => {
-                        const submenuName = subMenuItem.dataset.submenu;
-                        if (!submenuName) return;
-                        if (activeSubmenuItem === submenuName) return;
-                        activeSubmenuItem = submenuName;
-                        submenuSeparator.style.opacity = 1;
-                        let template = document.querySelector(
-                            `template[data-submenu=${submenuName}]`
-                        );
-                        if (!template) return;
-                        template = template.content.cloneNode(true);
-                        return template;
+                    if (subMenuItem.onmouseenter && subMenuItem.onclick) return;
+                    subMenuItem.onmouseenter = () => {
+                        if (isMobile()) return;
+                        populateTemplate(subMenuItem);
                     };
-
-
-                    if (window.innerWidth > 900) {
-                        if (subMenuItem.onmouseenter) return;
-                        subMenuItem.onmouseenter = () => {
-                            const template = getTemplate(subMenuItem);
-                            if(!template) return;
-                            subSubMenuPlaceholder.innerHTML = "";
-                            subSubMenuPlaceholder.appendChild(template);
-                            subSubMenuPlaceholder.querySelector('#subsubmenu-title').innerText = document.querySelector(`li[data-submenu=${subMenuItem.dataset.submenu}]`).innerText;
-                        };
-                    } else {
-                        subMenuItem.onclick = () => {
-                            const template = getTemplate(subMenuItem);
-                            subSubMenuPlaceholder.innerHTML = "";
-                            subSubMenuPlaceholder.appendChild(template);
-                        };
-                    }
+                    subMenuItem.onclick = () => {
+                        if (!isMobile()) return;
+                        populateTemplate(subMenuItem);
+                        header.classList.add("subsubmenu-opened");
+                    };
                 });
             };
 
             const addClickListenersToMenuItems = () => {
                 mainMenuItems.forEach((menuItem) => {
                     if (!subMenuPlaceholder) return;
-                    if (window.innerWidth > 900)
-                        menuItem.onclick = () => {
-                            const navItemName = menuItem.dataset.nav;
-                            if (!navItemName) return;
+                    menuItem.onclick = () => {
+                        const navItemName = menuItem.dataset.nav;
+                        if (!navItemName) return;
+                        if (!isMobile()) {
                             if (activeMenuItem === navItemName)
                                 return closeSubmenu();
-                            activeMenuItem = navItemName;
-                            activeSubmenuItem = "";
-                            submenuSeparator.style.opacity = 0;
-                            subSubMenuPlaceholder.innerHTML = "";
-                            let template = document.querySelector(
-                                `template[data-nav=${navItemName}]`
-                            );
-                            if (!template) return;
-                            template = template.content.cloneNode(true);
-                            subMenuPlaceholder.innerHTML = "";
-                            subMenuPlaceholder.appendChild(template);
-                            addListenersToSubmenus(subMenuPlaceholder);
-                            header.classList.add("light");
-                            recalculateSubMenuHeight(subMenuPlaceholder);
+                        }
+                        activeMenuItem = navItemName;
+                        activeSubmenuItem = "";
+                        submenuSeparator.style.opacity = 0;
+                        subSubMenuPlaceholder.innerHTML = "";
+                        let template = document.querySelector(
+                            `template[data-nav=${navItemName}]`
+                        );
+                        if (!template) return;
+                        template = template.content.cloneNode(true);
+                        subMenuPlaceholder.innerHTML = "";
+                        subMenuPlaceholder.appendChild(template);
+                        addListenersToSubmenus(subMenuPlaceholder);
+                        header.classList.add("light");
+                        if (!isMobile()) {
+                            toggleMenuHeight(subMenuPlaceholder);
+                        }
+                        if (isMobile()) {
+                            header.classList.add("submenu-opened");
+                        }
+                        document.querySelector(
+                            ".header .submenu-back-btn"
+                        ).onclick = () => {
+                            header.classList.remove("submenu-opened");
+                            activeMenuItem = null;
                         };
-                    else menuItem.onclick = () => {};
+                    };
                 });
             };
             addClickListenersToMenuItems();
@@ -2250,22 +2502,18 @@
                 navbar.classList.add("menu-opened");
                 openMenuBtn.style.display = "none";
                 closeMenuBtn.style.display = "block";
-                menuOpened = true;
+                setMenuOpened(true);
                 header.classList.add("light");
             };
-            closeMenuBtn.onclick = () => {
-                navbar.classList.remove("menu-opened");
-                openMenuBtn.style.display = "block";
-                closeMenuBtn.style.display = "none";
-                menuOpened = false;
-                if (window.scrollY <= headerBackgroundChangethreshold)
-                    header.classList.remove("light");
-            };
+
+            closeMenuBtn.onclick = closeMenu;
+
+            searchBtn.onclick = toggleSearchOpen;
 
             window.addEventListener("scroll", (e) => {
                 if (window.scrollY > headerBackgroundChangethreshold)
                     header.classList.add("light");
-                else if (!activeMenuItem && !menuOpened)
+                else if (!activeMenuItem && !menuOpened && !searchOpened)
                     header.classList.remove("light");
             });
 

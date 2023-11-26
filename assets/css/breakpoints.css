@@ -344,6 +344,17 @@
     .support-us-banner .support-us-banner__media-container {
         height: 20vw;
     }
+
+
+
+    .event-metadata__play-icon{
+        position: absolute;
+        left: 6px;
+        bottom: 6px;
+        width: 30px;
+        font-size: 9px;
+        height: 23px;
+    }
 }
 
 @media screen and (max-width: 500px) {
