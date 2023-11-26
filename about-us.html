@@ -53,9 +53,9 @@
                         />
                     </a>
                     <div class="header__right-group">
-                        <div class="header__search_btn">
-                            <span class="hide-on-desktop">Search</span>
-                            <i class="fa fa-search"></i>
+                        <div class="header__search_btn header__searchBtn">
+                            <span class="hide-on-mobile">Search</span>
+                            <i class="fa fa-search hide-on-desktop"></i>
                         </div>
                         <div class="header__hamburger-menu">
                             <i class="open-icon fa fa-bars"></i>
@@ -65,24 +65,50 @@
                 </div>
                 <nav class="header__nav_bar">
                     <div class="header__main-menu">
-                        <div class="header__nav_option" data-nav="topics">
-                            <span>Topics</span>
-                            <i class="fa fa-chevron-down"></i>
+                        <div
+                            class="header__nav_option-container ms-md-0 me-md-0"
+                        >
+                            <div
+                                class="container header__nav_option"
+                                data-nav="topics"
+                            >
+                                <span>Topics</span>
+                                <i class="fa fa-chevron-down"></i>
+                            </div>
                         </div>
-                        <div class="header__nav_option" data-nav="publications">
-                            <span>Publications & Resources</span>
-                            <i class="fa fa-chevron-down"></i>
+                        <div
+                            class="header__nav_option-container ms-md-0 me-md-0"
+                        >
+                            <div
+                                class="container header__nav_option"
+                                data-nav="publications"
+                            >
+                                <span>Publications & Resources</span>
+                                <i class="fa fa-chevron-down"></i>
+                            </div>
                         </div>
-                        <div class="header__nav_option">
-                            <span>Events</span>
+                        <div
+                            class="header__nav_option-container ms-md-0 me-md-0"
+                        >
+                            <div class="container header__nav_option">
+                                <span>Events</span>
+                            </div>
                         </div>
-                        <div class="header__nav_option">
-                            <span>Networks</span>
-                            <i class="fa fa-chevron-down"></i>
+                        <div
+                            class="header__nav_option-container ms-md-0 me-md-0"
+                        >
+                            <div class="container header__nav_option">
+                                <span>Networks</span>
+                                <i class="fa fa-chevron-down"></i>
+                            </div>
                         </div>
-                        <div class="header__nav_option">
-                            <span>About Us</span>
-                            <i class="fa fa-chevron-down"></i>
+                        <div
+                            class="header__nav_option-container ms-md-0 me-md-0"
+                        >
+                            <div class="container header__nav_option">
+                                <span>About Us</span>
+                                <i class="fa fa-chevron-down"></i>
+                            </div>
                         </div>
                     </div>
                     <div class="header__submenu">
@@ -93,44 +119,102 @@
                         </div>
                         <template data-nav="topics">
                             <div class="header__submenu__content">
-                                <h3 class="card-title">Topic Themes</h3>
+                                <h3 class="card-title hide-on-mobile">
+                                    Topic Themes
+                                </h3>
+
                                 <ul class="submenu-list">
-                                    <li
-                                        class="submenu-item"
-                                        data-submenu="arab_transformations_and_al_nahda"
+                                    <div
+                                        class="submenu-item-container hide-on-desktop"
                                     >
-                                        <a href="/topics.html">
-                                            Arab Transformations and Al Nahda
-                                        </a>
-                                    </li>
-                                    <li
-                                        class="submenu-item"
-                                        data-submenu="access_to_justice"
-                                    >
-                                        <a href="#"> Access to Justice </a>
-                                    </li>
-                                    <li class="submenu-item">
-                                        <a href="#">
-                                            Social Protection and Economic
-                                            Development
-                                        </a>
-                                    </li>
-                                    <li class="submenu-item">
-                                        <a href="#">
-                                            The Question of Palestine
-                                        </a>
-                                    </li>
-                                    <li class="submenu-item">
-                                        <a href="#">
-                                            Migration, Forced Displacement, and
-                                            statelessness in the Arab World
-                                        </a>
-                                    </li>
-                                    <li class="submenu-item">
-                                        <a href="#">
-                                            Gender Justice and Youth Empowerment
-                                        </a>
-                                    </li>
+                                        <li
+                                            class="submenu-mobile-header container d-flex align-items-center"
+                                            data-submenu="arab_transformations_and_al_nahda"
+                                        >
+                                            <div
+                                                class="submenu-back-btn d-flex gap-2 align-items-center pe-4 me-4 border-end"
+                                            >
+                                                <i
+                                                    class="fa fa-chevron-left"
+                                                ></i>
+                                                back
+                                            </div>
+                                            <a href="/topics.html"> Topics </a>
+                                            <i
+                                                class="fa-solid fa-chevron-right"
+                                            ></i>
+                                        </li>
+                                    </div>
+                                    <div class="submenu-item-container">
+                                        <li
+                                            class="submenu-item container"
+                                            data-submenu="arab_transformations_and_al_nahda"
+                                        >
+                                            <a href="/#">
+                                                Arab Transformations and Al
+                                                Nahda
+                                            </a>
+                                            <i
+                                                class="fa-solid fa-angles-right"
+                                            ></i>
+                                        </li>
+                                    </div>
+
+                                    <div class="submenu-item-container">
+                                        <li
+                                            class="submenu-item container"
+                                            data-submenu="access_to_justice"
+                                        >
+                                            <a href="#"> Access to Justice </a>
+                                            <i
+                                                class="fa-solid fa-angles-right"
+                                            ></i>
+                                        </li>
+                                    </div>
+                                    <div class="submenu-item-container">
+                                        <li class="submenu-item container">
+                                            <a href="#">
+                                                Social Protection and Economic
+                                                Development
+                                            </a>
+                                            <i
+                                                class="fa-solid fa-angles-right"
+                                            ></i>
+                                        </li>
+                                    </div>
+                                    <div class="submenu-item-container">
+                                        <li class="submenu-item container">
+                                            <a href="#">
+                                                The Question of Palestine
+                                            </a>
+                                            <i
+                                                class="fa-solid fa-angles-right"
+                                            ></i>
+                                        </li>
+                                    </div>
+                                    <div class="submenu-item-container">
+                                        <li class="submenu-item container">
+                                            <a href="#">
+                                                Migration, Forced Displacement,
+                                                and statelessness in the Arab
+                                                World
+                                            </a>
+                                            <i
+                                                class="fa-solid fa-angles-right"
+                                            ></i>
+                                        </li>
+                                    </div>
+                                    <div class="submenu-item-container">
+                                        <li class="submenu-item container">
+                                            <a href="#">
+                                                Gender Justice and Youth
+                                                Empowerment
+                                            </a>
+                                            <i
+                                                class="fa-solid fa-angles-right"
+                                            ></i>
+                                        </li>
+                                    </div>
                                 </ul>
                             </div>
 
@@ -139,26 +223,68 @@
                             >
                                 <div class="header__subsubmenu__content">
                                     <h3
-                                        class="card-title"
+                                        class="card-title hide-on-mobile"
                                         id="subsubmenu-title"
-                                    ></h3>
+                                    >
+                                        Arab Transformations And Al Nahda
+                                    </h3>
+
                                     <ul class="submenu-list">
-                                        <li class="submenu-item">
-                                            <a href="#">
-                                                Revival of Al Nahda Talks
-                                            </a>
-                                        </li>
-                                        <li class="submenu-item">
-                                            <a href="#">
-                                                Peace and Conflict in the Arab
-                                                World
-                                            </a>
-                                        </li>
-                                        <li class="submenu-item">
-                                            <a href="#">
-                                                Civic Space and Society
-                                            </a>
-                                        </li>
+                                        <div
+                                            class="submenu-item-container hide-on-desktop"
+                                        >
+                                            <li
+                                                class="submenu-mobile-header container d-flex align-items-center"
+                                                data-submenu="arab_transformations_and_al_nahda"
+                                            >
+                                                <div
+                                                    class="subsubmenu-back-btn d-flex gap-2 align-items-center pe-4 me-4 border-end"
+                                                >
+                                                    <i
+                                                        class="fa fa-chevron-left"
+                                                    ></i>
+                                                    back
+                                                </div>
+                                                <a href="/topics.html">
+                                                    Arab Transformations And Al
+                                                    Nahda
+                                                </a>
+                                                <i
+                                                    class="fa-solid fa-chevron-right"
+                                                ></i>
+                                            </li>
+                                        </div>
+                                        <div class="submenu-item-container">
+                                            <li class="submenu-item container">
+                                                <a href="#">
+                                                    Revival of Al Nahda Talks
+                                                </a>
+                                                <i
+                                                    class="fa-solid fa-chevron-right hide-on-desktop"
+                                                ></i>
+                                            </li>
+                                        </div>
+                                        <div class="submenu-item-container">
+                                            <li class="submenu-item container">
+                                                <a href="#">
+                                                    Peace and Conflict in the
+                                                    Arab World
+                                                </a>
+                                                <i
+                                                    class="fa-solid fa-chevron-right hide-on-desktop"
+                                                ></i>
+                                            </li>
+                                        </div>
+                                        <div class="submenu-item-container">
+                                            <li class="submenu-item container">
+                                                <a href="#">
+                                                    Civic Space and Society
+                                                </a>
+                                                <i
+                                                    class="fa-solid fa-chevron-right hide-on-desktop"
+                                                ></i>
+                                            </li>
+                                        </div>
                                     </ul>
                                 </div>
                             </template>
@@ -168,7 +294,9 @@
                                     <h3
                                         class="card-title"
                                         id="subsubmenu-title"
-                                    ></h3>
+                                    >
+                                        Access To Justice
+                                    </h3>
                                     <ul class="submenu-list">
                                         <li class="submenu-item">
                                             <a href="#"> Legal Aid </a>
@@ -220,13 +348,32 @@
                         </template>
                     </div>
                 </nav>
+                <div class="header__search-container">
+                    <div class="container">
+                        <form
+                            class="mt-5 mb-5 search-input-container"
+                            action="/search"
+                            method="get"
+                        >
+                            <input
+                                type="search"
+                                name="q"
+                                class="header__search-input"
+                                placeholder="Search alnahda"
+                            />
+                            <button type="submit">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </header>
         <main>
             <section>
                 <div class="container block-section pad-header-height">
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-12 col-md-6 order-1 order-md-0">
                             <h2 class="display-3 fw-bold mb-4">About Us</h2>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur
@@ -242,7 +389,7 @@
                                 nulla porttitor massa. Ipsum faucibus.
                             </p>
                         </div>
-                        <div class="col-6 img img-contain">
+                        <div class="col-6 col-md-6 mb-5 mb-md-0 img img-contain mobile-aspect-3 order-0 order-md-1">
                             <img
                                 src="/assets/img/alNahdaLogo_dark.svg"
                                 alt=""
@@ -254,10 +401,10 @@
             <section>
                 <div class="container block-section">
                     <div class="row">
-                        <div class="col-6 img img-contain">
+                        <div class="col-4 col-md-6 mb-5 mb-md-0 img img-contain mobile-aspect-1">
                             <img src="/assets/img/person.png" alt="" />
                         </div>
-                        <div class="col-6">
+                        <div class="col-12 col-md-6">
                             <h2 class="display-3 fw-bold mb-4">
                                 A Letter From Our Chaiman
                             </h2>
@@ -285,7 +432,7 @@
                         <h2 class="display-3 fw-bolder">Presidents</h2>
                     </div>
                     <div class="row">
-                        <div class="col-6 mb-3">
+                        <div class="col-12 col-md-6 mb-3">
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit, sed do eiusmod tempor
@@ -295,7 +442,7 @@
                         </div>
                     </div>
                     <div class="row mb-4">
-                        <div class="col-4">
+                        <div class="col-6 col-md-4 mb-3">
                             <div class="person-card">
                                 <div class="person-card__img img">
                                     <img
@@ -311,7 +458,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-6 col-md-4 mb-3">
                             <div class="person-card">
                                 <div class="person-card__img img">
                                     <img
@@ -327,7 +474,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-6 col-md-4 mb-3">
                             <div class="person-card">
                                 <div class="person-card__img img">
                                     <img
@@ -353,7 +500,7 @@
                         <h2 class="display-3 fw-bolder">Executive Board</h2>
                     </div>
                     <div class="row">
-                        <div class="col-6 mb-3">
+                        <div class="col-12 col-md-6 mb-3">
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit, sed do eiusmod tempor
@@ -363,7 +510,7 @@
                         </div>
                     </div>
                     <div class="row mb-4">
-                        <div class="col-4">
+                        <div class="col-6 col-md-4 mb-3">
                             <div class="person-card">
                                 <div class="person-card__img img">
                                     <img
@@ -379,7 +526,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-6 col-md-4 mb-3">
                             <div class="person-card">
                                 <div class="person-card__img img">
                                     <img
@@ -395,7 +542,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-6 col-md-4 mb-3">
                             <div class="person-card">
                                 <div class="person-card__img img">
                                     <img
@@ -411,9 +558,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row mb-4">
-                        <div class="col-4">
+                        <div class="col-6 col-md-4 mb-3">
                             <div class="person-card">
                                 <div class="person-card__img img">
                                     <img
@@ -429,7 +574,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-6 col-md-4 mb-3">
                             <div class="person-card">
                                 <div class="person-card__img img">
                                     <img
@@ -445,7 +590,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-6 col-md-4 mb-3">
                             <div class="person-card">
                                 <div class="person-card__img img">
                                     <img
@@ -461,9 +606,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row mb-4">
-                        <div class="col-4">
+                        <div class="col-6 col-md-4 mb-3">
                             <div class="person-card">
                                 <div class="person-card__img img">
                                     <img
@@ -479,7 +622,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-6 col-md-4 mb-3">
                             <div class="person-card">
                                 <div class="person-card__img img">
                                     <img
@@ -495,7 +638,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-6 col-md-4 mb-3">
                             <div class="person-card">
                                 <div class="person-card__img img">
                                     <img
@@ -521,7 +664,7 @@
                         <h2 class="display-3 fw-bolder">Senior Advisors</h2>
                     </div>
                     <div class="row">
-                        <div class="col-6 mb-3">
+                        <div class="col-12 col-md-6 mb-3">
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit, sed do eiusmod tempor
@@ -531,7 +674,7 @@
                         </div>
                     </div>
                     <div class="row mb-4">
-                        <div class="col-4">
+                        <div class="col-6 col-md-4 mb-3">
                             <div class="person-card">
                                 <div class="person-card__img img">
                                     <img
@@ -547,7 +690,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-6 col-md-4 mb-3">
                             <div class="person-card">
                                 <div class="person-card__img img">
                                     <img
@@ -563,7 +706,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-6 col-md-4 mb-3">
                             <div class="person-card">
                                 <div class="person-card__img img">
                                     <img
@@ -579,9 +722,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row mb-4">
-                        <div class="col-4">
+                        <div class="col-6 col-md-4 mb-3">
                             <div class="person-card">
                                 <div class="person-card__img img">
                                     <img
@@ -597,7 +738,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-6 col-md-4 mb-3">
                             <div class="person-card">
                                 <div class="person-card__img img">
                                     <img
@@ -613,7 +754,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-6 col-md-4 mb-3">
                             <div class="person-card">
                                 <div class="person-card__img img">
                                     <img
@@ -629,9 +770,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row mb-4">
-                        <div class="col-4">
+                        <div class="col-6 col-md-4 mb-3">
                             <div class="person-card">
                                 <div class="person-card__img img">
                                     <img
@@ -647,7 +786,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-6 col-md-4 mb-3">
                             <div class="person-card">
                                 <div class="person-card__img img">
                                     <img
@@ -663,7 +802,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-6 col-md-4 mb-3">
                             <div class="person-card">
                                 <div class="person-card__img img">
                                     <img
@@ -679,6 +818,7 @@
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
                 </div>
             </section>
@@ -689,7 +829,7 @@
                         <h2 class="display-3 fw-bolder">The Center Team (Researchers' Team)</h2>
                     </div>
                     <div class="row">
-                        <div class="col-6 mb-3">
+                        <div class="col-12 col-md-6 mb-3">
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit, sed do eiusmod tempor
@@ -699,7 +839,7 @@
                         </div>
                     </div>
                     <div class="row mb-4">
-                        <div class="col-4">
+                        <div class="col-6 col-md-4 mb-3">
                             <div class="person-card">
                                 <div class="person-card__img img">
                                     <img
@@ -715,7 +855,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-6 col-md-4 mb-3">
                             <div class="person-card">
                                 <div class="person-card__img img">
                                     <img
@@ -731,7 +871,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-6 col-md-4 mb-3">
                             <div class="person-card">
                                 <div class="person-card__img img">
                                     <img
@@ -747,9 +887,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row mb-4">
-                        <div class="col-4">
+                        <div class="col-6 col-md-4 mb-3">
                             <div class="person-card">
                                 <div class="person-card__img img">
                                     <img
@@ -765,7 +903,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-6 col-md-4 mb-3">
                             <div class="person-card">
                                 <div class="person-card__img img">
                                     <img
@@ -781,7 +919,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-6 col-md-4 mb-3">
                             <div class="person-card">
                                 <div class="person-card__img img">
                                     <img
@@ -797,9 +935,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row mb-4">
-                        <div class="col-4">
+                        <div class="col-6 col-md-4 mb-3">
                             <div class="person-card">
                                 <div class="person-card__img img">
                                     <img
@@ -815,7 +951,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-6 col-md-4 mb-3">
                             <div class="person-card">
                                 <div class="person-card__img img">
                                     <img
@@ -831,7 +967,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-6 col-md-4 mb-3">
                             <div class="person-card">
                                 <div class="person-card__img img">
                                     <img
@@ -847,6 +983,7 @@
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
                 </div>
             </section>
@@ -857,7 +994,7 @@
                         <h2 class="display-3 fw-bolder">Donors & partners</h2>
                     </div>
                     <div class="row">
-                        <div class="col-6 mb-3">
+                        <div class="col-12 col-md-6 mb-3">
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit, sed do eiusmod tempor
@@ -868,7 +1005,7 @@
                     </div>
                     
                     <div class="row mb-4">
-                        <div class="col-4">
+                        <div class="col-6 col-md-4 mb-3">
                             <div class="person-card">
                                 <div class="person-card__img img">
                                     <img
@@ -884,7 +1021,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-6 col-md-4 mb-3">
                             <div class="person-card">
                                 <div class="person-card__img img">
                                     <img
@@ -900,7 +1037,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-6 col-md-4 mb-3">
                             <div class="person-card">
                                 <div class="person-card__img img">
                                     <img
@@ -916,9 +1053,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row mb-4">
-                        <div class="col-4">
+                        <div class="col-6 col-md-4 mb-3">
                             <div class="person-card">
                                 <div class="person-card__img img">
                                     <img
@@ -934,7 +1069,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-6 col-md-4 mb-3">
                             <div class="person-card">
                                 <div class="person-card__img img">
                                     <img
@@ -950,7 +1085,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-6 col-md-4 mb-3">
                             <div class="person-card">
                                 <div class="person-card__img img">
                                     <img
@@ -966,6 +1101,8 @@
                                 </div>
                             </div>
                         </div>
+
+                        
                     </div>
                 </div>
             </section>
@@ -975,7 +1112,9 @@
             <div class="footer-section">
                 <div class="container">
                     <div class="row">
-                        <div class="col-4 email-collector social-reach">
+                        <div
+                            class="col-12 mb-5 mb-md-0 col-md-4 email-collector social-reach"
+                        >
                             <h3 class="card-title mb-3">
                                 Subscribe to our email newsletter
                             </h3>
@@ -994,7 +1133,7 @@
                                 <button type="button">Subscribe →</button>
                             </div>
                         </div>
-                        <div class="col-4 offset-4 social-follow">
+                        <div class="col-12 col-md-4 offset-md-4 social-follow">
                             <h3 class="card-title">
                                 Follow us on social media
                             </h3>

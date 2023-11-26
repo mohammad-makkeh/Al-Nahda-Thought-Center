@@ -170,6 +170,12 @@ input {
     opacity: 0.85;
 }
 
+.aspect-3{
+    aspect-ratio: 3;
+}
+
+
+
 /*
 *
 *
