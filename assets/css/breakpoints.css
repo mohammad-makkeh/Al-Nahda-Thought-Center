@@ -34,6 +34,10 @@
         color: white;
     }
 
+    .book-details-overview__cover{
+        width: 340px;
+    }
+
     /* footer */
     footer .footer-section {
         padding-block: calc(var(--margin-block) * 0.75);
@@ -170,12 +174,13 @@
     }
 
     /* report card */
-    .card__tag-floating {
+    .card__tag-floating:not(.book-price) {
         position: static;
         padding: 0;
         background-color: transparent;
         color: var(--accent-color);
     }
+    
 
     /* carousel */
     .card-trio {
@@ -360,8 +365,39 @@
     .hero__secondary__content .hero__secondary__content__page-description{
         max-width: 90%;
     }
+
     .section-title .section-title__desctiption{
         max-width: 100%;
+    }
+
+    .book-details-overview__cover{
+        width: 230px;
+        margin-right: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .person-card {
+        grid-template-columns: 1fr;
+        gap: 1.4rem;
+    }
+    .person-card .person-card__img {
+        width: 40%;
+    }
+    .person-card__name{
+        font-size: 1.4rem;
+        font-weight: bold;
+        line-height: 11px;
+        margin-bottom: 0.35rem;
+    }
+
+    .book-details-overview__email-download .email-downlaod-input{
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .book-details-overview__downloadBtn{
+        width: 100%;
+        justify-content: center;
     }
 }
 

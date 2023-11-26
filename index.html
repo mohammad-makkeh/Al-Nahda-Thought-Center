@@ -2312,26 +2312,6 @@
             </div>
         </footer>
 
-        <!-- carousels -->
-        <script>
-            const carousels = Array.from(
-                document.querySelectorAll(".carousel-container")
-            );
-            carousels.forEach((carousel) => {
-                const swiperEl = carousel.querySelector(".swiper");
-                const swiper = new Swiper(swiperEl, {
-                    slidesPerView: 1,
-                    spaceBetween: 2,
-                    pagination: {
-                        el: carousel.querySelector(".swiper-pagination"),
-                    },
-                });
-                const nextEl = carousel.querySelector(".carousel-next-btn");
-                if (nextEl) nextEl.onclick = () => swiper.slideNext();
-                const prevEl = carousel.querySelector(".carousel-prev-btn");
-                if (prevEl) prevEl.onclick = () => swiper.slidePrev();
-            });
-        </script>
 
         <script>
             const isMobile = () => window.innerWidth < 768;
@@ -2601,6 +2581,28 @@
 
             window.addEventListener("resize", (e) => {
                 addClickListenersToMenuItems();
+            });
+        </script>
+
+        
+        <!-- carousels -->
+        <script>
+            const carousels = Array.from(
+                document.querySelectorAll(".carousel-container")
+            );
+            carousels.forEach((carousel) => {
+                const swiperEl = carousel.querySelector(".swiper");
+                const swiper = new Swiper(swiperEl, {
+                    slidesPerView: 1,
+                    spaceBetween: 2,
+                    pagination: {
+                        el: carousel.querySelector(".swiper-pagination"),
+                    },
+                });
+                const nextEl = carousel.querySelector(".carousel-next-btn");
+                if (nextEl) nextEl.onclick = () => swiper.slideNext();
+                const prevEl = carousel.querySelector(".carousel-prev-btn");
+                if (prevEl) prevEl.onclick = () => swiper.slidePrev();
             });
         </script>
 
