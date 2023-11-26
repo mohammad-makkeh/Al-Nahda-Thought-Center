@@ -355,6 +355,14 @@
         font-size: 9px;
         height: 23px;
     }
+
+
+    .hero__secondary__content .hero__secondary__content__page-description{
+        max-width: 90%;
+    }
+    .section-title .section-title__desctiption{
+        max-width: 100%;
+    }
 }
 
 @media screen and (max-width: 500px) {
